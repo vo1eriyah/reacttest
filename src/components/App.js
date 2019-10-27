@@ -6,7 +6,7 @@ import './Main.css'
 function App(props) {
   return (
     <main>
-      <Selfinfo name="Valeriya"/>
+      <Selfinfo /*name="Valeriya"*//>
       <Footer />
     </main>
   );
