@@ -27,7 +27,7 @@ class CurrentDate extends React.Component{
             <div
             className="Date">
                 <p>
-                    Now it's {this.state.date.toLocaleTimeString()} 🙃
+                    Now it's {this.state.date.toLocaleTimeString()}🙃
                 </p>
             </div>
         )
