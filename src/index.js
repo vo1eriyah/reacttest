@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './components/App';
-import Selfinfo from'./components/Self-info';
 import * as serviceWorker from './serviceWorker';
-
+import Footer from './components/Footer';
+import CurrentDate from './components/CurrentDate'
+import './components/Main.css'
 
 ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<CurrentDate />, document.getElementById("datetime"));
 
-/*const info = <Selfinfo name="Valeriya"/>
-ReactDOM.render(info, document.getElementById("about"))*/
 serviceWorker.unregister();

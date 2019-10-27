@@ -1,17 +1,25 @@
-main {
+body {
     margin: 0 auto;
     align-items: center;
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
+    left: 0;
     background-color: #192532;
     color: #F2F2F2;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.Date{
+    float: right;
+    font-size: 0.9rem;
+    margin-right: 16px;
+}
+
 .My-info{
     margin: 0px 16px 16px 16px;
+    float: left;
 }
 
 .My-card {
@@ -29,6 +37,8 @@ main {
 .My-card ul li{
     list-style-type: lower-latin;
 }
+
+
 
 footer {
     font-size: 0.6rem;

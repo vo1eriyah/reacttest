@@ -3,20 +3,37 @@ import ReactDOM from 'react-dom'
 
 class CurrentDate extends React.Component{
     constructor(props){
-        super(props)
-        this.state = {date: new Date()}
+        super(props);
+        this.state = {date: new Date()};
     }
     
+    componentDidMount(){
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.timerID);
+    }
+
+    tick(){
+        this.setState({ date: new Date()});
+    }
+
     render(){
         return(
-            <div>
-                <h2>wow!</h2>
+            <div
+            className="Date">
                 <p>
-                    Now it's {this.state.date.toLocaleDateString()} 🙃
+                    Now it's {this.state.date.toLocaleTimeString()} 🙃
                 </p>
             </div>
         )
     }
 }
 
-ReactDOM.render(<CurrentDate />, document.getElementById('datetime'))
+
+
+export default CurrentDate;
