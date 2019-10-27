@@ -10,6 +10,7 @@ class CurrentDate extends React.Component{
     render(){
         return(
             <div>
+                <h2>wow!</h2>
                 <p>
                     Now it's {this.state.date.toLocaleDateString()} 🙃
                 </p>
@@ -18,4 +19,4 @@ class CurrentDate extends React.Component{
     }
 }
 
-ReactDOM.render(<CurrentDate />, document.getElementById('root'))
+ReactDOM.render(<CurrentDate />, document.getElementById('datetime'))
