@@ -12,7 +12,7 @@ function Bootstraptest() {
 </div>
                 </div>
                 <div class="col-sm">
-                One of three columns
+                test for branch1
                 </div>
                 <div class="col-sm">
                 One of three columns
