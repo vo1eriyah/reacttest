@@ -17,14 +17,10 @@ body {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: flex-end;
-    max-width: rem-calc(1200);
     align-items: center;
 }
 
 .post-container {
-    
     background-color: tomato;
     width: 400px;
     height: 200px;
@@ -41,6 +37,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 50%;
+    flex: 1;
 }
 
 .My-card {
