@@ -9,7 +9,8 @@ import CurrentDate from './components/CurrentDate'
 import './components/Main.css'
 import Bootstraptest from './components/Bootstraptest'
 
-ReactDOM.render(<Bootstraptest />, document.getElementById('root'));
+/*ReactDOM.render(<Bootstraptest />, document.getElementById('root'));*/
+ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<CurrentDate />, document.getElementById("datetime"));
 
 serviceWorker.unregister();
