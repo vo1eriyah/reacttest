@@ -15,7 +15,7 @@ function App(props) {
             </Col>
             <Col md={4}>
               <Post/>
-            </Col>           
+            </Col>\           
         </Row>
         
       <Footer />
