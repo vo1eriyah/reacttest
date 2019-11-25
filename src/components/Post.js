@@ -1,8 +1,10 @@
 import React from 'react'
+import { Grid } from 'react-flexbox-grid';
 
 function Post (){
     return(
-        <div class="post-container"></div>
+
+        <Grid item className="post-container"/>
     );
 }
 
