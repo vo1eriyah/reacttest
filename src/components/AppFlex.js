@@ -1,13 +1,35 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import '/components/appflex.css'
 
 function AppFlex() {
     return(
         <div class='container'>
-            <Grid/>
+            <Grid
+            />
                 <Row>
-                    <div id="col">col1</div>
+                    <Col xs={6}>
+                        <div id="col">col1</div>
+                    </Col>
+
+                    <Col xs={6}>
+                        <div id="col">col2</div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={2}>
+                        <div id="col">col1</div>
+                    </Col>
+
+                    <Col xs={6}>
+                        <div id="col">col2</div>
+                    </Col>
+
+                    <Col md={2}>
+                        <div id="col">col3</div>
+                    </Col>
+                    <Col lg={2}>
+                        <div id="col">col4</div>
+                    </Col>
                 </Row>
             </div>
 
