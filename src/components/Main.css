@@ -17,14 +17,12 @@ body {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
     align-items: center;
 }
 
 .post-container {
     background-color: tomato;
-    width: 100%;
+    width: 400px;
     height: 200px;
 }
 

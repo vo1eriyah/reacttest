@@ -13,21 +13,9 @@ function App(props) {
               <Avatar />
               <Selfinfo /*name="Valeriya"*//>
             </Col>
-            <Col lg={6}>
+            <Col md={4}>
               <Post/>
-            </Col>  
-            <Col md={3}>
-              <Post/>
-            </Col>            
-        </Row>
-        <Row>
-          <Col md={2}><Post/></Col>
-          <Col md={2}><Post/></Col>
-          <Col md={2}><Post/></Col>
-          <Col md={2}><Post/></Col>
-          <Col md={2}><Post/></Col>
-          <Col md={2}><Post/></Col>
-
+            </Col>           
         </Row>
         
       <Footer />

@@ -8,11 +8,10 @@ import * as serviceWorker from './serviceWorker';
 import Footer from './components/Footer';
 import CurrentDate from './components/CurrentDate'
 import './components/Main.css'
-import './components/appflex.scss'
 import Bootstraptest from './components/Bootstraptest'
 
 /*ReactDOM.render(<Bootstraptest />, document.getElementById('root'));*/
 ReactDOM.render(<AppFlex />, document.getElementById('root'));
-/*ReactDOM.render(<CurrentDate />, document.getElementById("datetime"));*/
+ReactDOM.render(<CurrentDate />, document.getElementById("datetime"));
 
 serviceWorker.unregister();
