@@ -19,12 +19,24 @@ body {
     display: flex;
     align-items: center;
 }*/
-#col {
+.col {
     display: inline-flex;
     background-color: tomato;
     width: 100%;
     flex-wrap: wrap;
-    align-self: flex-end;
+    align-items: stretch;
+    height: 100px;
+    margin-top: 16px;
+}
+
+.todelete {
+    display: none;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+    height: 100px;
+    margin-top: 16px;
+    background-color: indigo;
 }
 
 .post-container {
@@ -79,6 +91,8 @@ footer {
     margin-left: 16px;
 }
 
-@media only screen and (min-width: 48rem) {
-    .aside { flex: 1 auto; }
+@media only screen and (min-width: 768px) {
+    .todelete{
+        display: inline-flex;
+    }
 }
