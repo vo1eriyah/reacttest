@@ -1,9 +1,9 @@
 import React from 'react'
 
 class MainButton extends React.Component{
-    render(){
+    render(props){
         return (
-            <div className="main-button">Button</div>
+            <button className="main-button" type="button">{this.props.caption}</button>
 
         )
     }

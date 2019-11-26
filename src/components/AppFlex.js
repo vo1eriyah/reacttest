@@ -15,7 +15,7 @@ function AppFlex() {
                     <Col xs={3}>
                         <SelfInfo/>
                         <Menu/>
-                        <div style={{ margin: "24px" }}><MainButton/></div>
+                        <div  style={{ margin: "24px" }} ><MainButton caption="Write post!"/></div>
                     </Col>
 
                     <Col md={6}>
