@@ -3,6 +3,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Footer from './Footer';
 import SelfInfo from './Self-info';
 import Post from './Post';
+import Menu from './Menu';
 
 function AppFlex() {
     return(
@@ -12,6 +13,7 @@ function AppFlex() {
                 <Row>
                     <Col xs={3}>
                         <div><SelfInfo/></div>
+                        <div><Menu/></div>
                     </Col>
 
                     <Col md={6}>
