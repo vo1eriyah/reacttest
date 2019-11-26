@@ -5,21 +5,21 @@ import Avatar from './Avatar';
 import Post from './Post';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
+/*const App2 = () => (
+  <Flex>
+    <Box width={1/2} px={2}>
+      Half width
+    </Box>
+    <Box width={1/2} px={2}>
+      Half width
+    </Box>
+  </Flex>
+)
+*/
+
 function App(props) {
   return (
-    <div class="container" >
-        <Row>
-            <Col md={3}>
-              <Avatar />
-              <Selfinfo /*name="Valeriya"*//>
-            </Col>
-            <Col md={4}>
-              <Post/>
-            </Col>           
-        </Row>
-        
-      <Footer />
-    </div>
+    <div></div>
   );
 }
 
