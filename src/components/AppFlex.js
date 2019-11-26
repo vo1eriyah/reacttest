@@ -24,6 +24,9 @@ function AppFlex() {
                 <Row>
                     <Col lg={12}><Footer/></Col>
                 </Row>
+                <Row>
+                    <Col lg={12}><Footer/></Col>
+                </Row>
            </div>
 
 
