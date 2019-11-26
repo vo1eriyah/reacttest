@@ -134,6 +134,23 @@ border-radius: 4px;
     display: inline-flex;
 }
 
+.main-button{
+    background: #8566FF;
+    border-radius: 4px;
+    width: 100%;
+    height: 48px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #f2f2f2;
+    padding-top: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
 .My-card h3 {
     margin-inline-start: 0.3em;
 }

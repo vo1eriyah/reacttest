@@ -4,6 +4,7 @@ import Footer from './Footer';
 import SelfInfo from './Self-info';
 import Post from './Post';
 import Menu from './Menu';
+import MainButton from './MainButton';
 
 function AppFlex() {
     return(
@@ -12,8 +13,9 @@ function AppFlex() {
             />
                 <Row>
                     <Col xs={3}>
-                        <div><SelfInfo/></div>
-                        <div><Menu/></div>
+                        <SelfInfo/>
+                        <Menu/>
+                        <div style={{ margin: "24px" }}><MainButton/></div>
                     </Col>
 
                     <Col md={6}>
