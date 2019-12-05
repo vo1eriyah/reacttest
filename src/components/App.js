@@ -1,26 +1,40 @@
-import React from 'react';
-import Selfinfo from './Self-info';
-import Footer from './Footer';
-import Avatar from './Avatar';
-import Post from './Post';
+import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import Footer from './Footer/Footer';
+import SelfInfo from './Profile/Profile';
+import Post from './Post/Post';
+import Menu from 'src/components/Aside/Menu';
+import MainButton from './Buttoтs/MainButton';
+function App() {
+    return(
+        <div class='container'>
+            <Grid container 
+            />
+                <Row>
+                    <Col xs={3}>
+                        <SelfInfo/>
+                        <Menu/>
+                        <div  style={{ margin: "24px" }} ><MainButton caption="Write post!"/></div>
+                    </Col>
 
-/*const App2 = () => (
-  <Flex>
-    <Box width={1/2} px={2}>
-      Half width
-    </Box>
-    <Box width={1/2} px={2}>
-      Half width
-    </Box>
-  </Flex>
-)
-*/
+                    <Col md={6}>
+                        <div><Post/></div>
+                    </Col>
+                    <Col lg={3}>
+                        <div class="col todelete">sidebar</div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg={12}><Footer/></Col>
+                </Row>
+                <Row>
+                    <Col lg={12}><Footer/></Col>
+                </Row>
+           </div>
 
-function App(props) {
-  return (
-    <div></div>
-  );
+
+
+    );
 }
 
-export default App;
+export default App
