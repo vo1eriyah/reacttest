@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../Card'
+import Card from '../Deprecated❌/Card'
 import Avatar from './Avatar'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import { Responsive as ResponsiveGridLayout } from 'react-grid-layout';

@@ -1,8 +1,8 @@
 import React from 'react';
-import Selfinfo from './Profile/Profile';
-import Footer from './Footer/Footer';
-import Avatar from './Profile/Avatar';
-import Post from './Post/Post';
+import Selfinfo from '../Profile/Profile';
+import Footer from '../Footer/Footer';
+import Avatar from '../Profile/Avatar';
+import Post from '../Post/Post';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 /*const App2 = () => (

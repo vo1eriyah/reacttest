@@ -4,7 +4,7 @@ import Footer from './Footer/Footer';
 import SelfInfo from './Profile/Profile';
 import Post from './Post/Post';
 import Menu from './Aside/Menu';
-import MainButton from './Buttoтs/MainButton';
+import MainButton from './Buttons/MainButton';
 function App() {
     return(
         <div class='container'>
