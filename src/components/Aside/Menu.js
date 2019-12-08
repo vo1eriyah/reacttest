@@ -1,10 +1,10 @@
 import React from 'react'
 import { Grid, Row } from 'react-flexbox-grid'
 import MenuItem from './MenuItem.js'
-import SettingsIcn from 'icons/settings.svg'
-import DialogsIcn from 'icons/dialogs.svg'
-import NotificationsIcn from 'icons/notifications.svg'
-import DealsIcn from 'icons/deals.svg'
+import SettingsIcn from './settings.svg'
+import DialogsIcn from './dialogs.svg'
+import NotificationsIcn from './notifications.svg'
+import DealsIcn from './deals.svg'
 
 
 class Menu extends React.Component{

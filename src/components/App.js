@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Footer from './Footer/Footer';
 import SelfInfo from './Profile/Profile';
 import Post from './Post/Post';
-import Menu from 'src/components/Aside/Menu';
+import Menu from './Aside/Menu';
 import MainButton from './Buttoтs/MainButton';
 function App() {
     return(
