@@ -6,6 +6,7 @@ $background_color: #121526;
 $card_background_color: #1B1F36;
 $card_border_color: #272D51;
 $paragraph_text_size: 15px;
+$accent_color: #A18AFF;
 /////////////////////////////////////
 
 
@@ -19,7 +20,7 @@ body {
     left: 0;
     background-color: $background_color;
     color: $text_color;
-    font-family: 100% $font;
+    font-family: $font;
 }
 
 .container {
@@ -39,13 +40,13 @@ body {
 
 .post-container {
     width: 100%;
-    min-height: 50px;
+    height: 100%;
     flex-wrap: wrap;
     align-items: stretch;
     background: $card_background_color;
     border: 1px solid $card_border_color;
     border-radius: 4px;
-    padding-top: 16px;
+    padding: 16px 8px 8px 8px;
 }
 
 .Quote {
@@ -65,6 +66,47 @@ body {
     margin-right: 16px;
 }
 
+.author_photo {
+    padding-left: 16px;
+}
+
+.author_info {
+    margin-left: 16px;
+
+    .author_name {
+        font-weight: 600;
+    }
+
+    .author_nickname {
+        color: $secondary_text_color;
+    }
+
+    .permalink {
+        display: inline-flex;
+        margin-top: 4px;
+        padding-right: 8px;
+    }
+
+    .post_date {
+        color: $secondary_text_color;
+        margin-top: 4px;
+        padding-left: 8px;
+    }
+}
+
+.post_content {
+    padding-left: 56px;
+    padding-right: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+
+    .post_photo {
+        width: auto;
+        max-width: 208px;
+        padding-right: 16px;
+        padding-top: 16px;
+    }
+}
 
 .My-card {
     display: none;
@@ -84,46 +126,46 @@ body {
     border: 1px solid $text_color ;
     display: flex;
     flex: 1;
-    margin: 0px 8px 8px 8px;
+    margin: 0px 4px 4px 4px;
+    background-color: $secondary_text_color;
 }
+
+.avatar {
+    display: inline-flex;
+}
+
 
 .self-info {
-    margin: 0px 0px 0px 8px;
+    padding: 0px 32px 32px 24px;
+
+    .bio-name {
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: -0.41;
+        line-height: 20px;
+        display: inline-flex;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+    }
+
+    .bio-nickname {
+        font-size: 17px;
+        font-weight: 600;
+        font-style: italic;
+        letter-spacing: 0.7px;
+        white-space: nowrap;
+        color: $secondary_text_color;
+        line-height: 20px;
+        display: inline-flex;
+    }
 }
-
-.bio-description {
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: -0.41;
-    line-height: 20px;
-    display: inline-flex;
-}
-
-.bio-nickname {
-    font-size: 17px;
-    font-weight: 600;
-    font-style: italic;
-    letter-spacing: 0.7px;
-    white-space: nowrap;
-    color: $secondary_text_color;
-    line-height: 20px;
-    display: inline-flex;
-}
-
-/*.Quote {
-    background: $card_background_color;
-    border-radius: 4px;
-    width: 100%;
-    margin-top: 8px;
-}*/
-
-
-
 
 
 .main-menu {
     margin-top: 32px;
 }
+
 .menu-link {
     font-style: normal;
     font-weight: bold;
@@ -139,14 +181,18 @@ body {
     height: 48px;
     display: inline-flex;
     padding: 8px 8px 8px 8px;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        display: inline-flex;
+    }
 }
 
-.menu-item .icon {
-    width: 24px;
-    height: 24px;
-    display: inline-flex;
+.link {
+    color: $accent_color;
+    line-height: 18px;
 }
-
 .main-button{
     background: #8566FF;
     border-radius: 4px;
@@ -198,18 +244,20 @@ footer {
         display: inline-flex;
     }
 
-    .ava {
-        width: 48px;
-        height: 48px;
-    }
-
     .Aside {
         display: inline-flex;
     }
 }
 
-@media only screen and (min-width: 320px){
+@media screen and (min-width: 320px){
     .Aside {
         display: inline;
+    }
+
+    .post_content{
+        .post_photo {
+            width: auto;
+            max-width: 500px;
+        }
     }
 }

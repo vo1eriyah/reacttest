@@ -1,11 +1,10 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Footer from './Footer/Footer';
-import SelfInfo from './Profile/Profile';
+import Profile from './Profile/Profile';
 import Post from './Post/Post';
-import Menu from './Aside/Menu';
+import Menu from './Menu/Menu';
 import MainButton from './Buttons/MainButton';
-
 
 function App() {
     return(
@@ -14,7 +13,7 @@ function App() {
             />
                 <Row className="content">
                     <Col className="Aside" sm={3} lg={3}>
-                        <SelfInfo/>
+                        <Profile/>
                         <Menu/>
                         <div  style={{ margin: "24px" }} ><MainButton caption="Write post!"/></div>
                     </Col>
