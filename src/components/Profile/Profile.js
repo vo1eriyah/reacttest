@@ -9,7 +9,7 @@ class SelfInfo extends React.Component{
     render (props){
         return(
             <Grid direction="column" spacing={8}>
-                    <Row flexGrow={1} flexBasis='auto' horizontal='space-between'><Col xs={3}><Avatar/></Col>
+                    <Row flexGrow={1} flexBasis='auto' horizontal='space-between'><Col lg={3} xs={3}><Avatar/></Col>
                     <Col xs={9}>
                         <div className="self-info">
                         <span className="bio-description">100percent 50cent</span>
