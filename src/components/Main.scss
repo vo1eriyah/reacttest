@@ -81,7 +81,7 @@ body {
         color: $secondary_text_color;
     }
 
-    .permalink {
+    .location {
         display: inline-flex;
         margin-top: 4px;
         padding-right: 8px;
@@ -100,11 +100,19 @@ body {
     font-weight: 300;
     letter-spacing: 0.5px;
 
-    .post_photo {
-        width: auto;
+    .post_photo_solo {
         max-width: 208px;
         padding-right: 16px;
         padding-top: 16px;
+    }
+
+    .post_photo_solo {
+        img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
     }
 }
 
@@ -255,7 +263,7 @@ footer {
     }
 
     .post_content{
-        .post_photo {
+        .post_photo_solo {
             width: auto;
             max-width: 500px;
         }
