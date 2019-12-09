@@ -17,7 +17,8 @@ class Post extends React.Component{
                         <Col className="author_info">
                             <Row lg={12}><span className="author_name">{this.props.author_name} <i className="author_nickname">{this.props.author_nickname}</i></span></Row>
                             <Row lg={12}>
-                                <Col className="location"><a className="link" href="#">Jl. Pantai Kuta</a></Col>                     
+                                <Col className="location"><a className="link" href="#">Jl. Pantai Kuta</a></Col> 
+                                <div className="post_divider"></div>                    
                                 <Col className="post_date">12.12.2019</Col>
                             </Row>
                         </Col>

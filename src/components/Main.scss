@@ -24,11 +24,11 @@ body {
 }
 
 .container {
-    margin-top: 24px;
+    //margin-top: 24px;
 }
 
 
-.todelete {
+.wallet {
     display: none;
     width: 100%;
     flex-wrap: wrap;
@@ -39,6 +39,7 @@ body {
 }
 
 .post-container {
+    margin-top: 24px;
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
@@ -52,7 +53,7 @@ body {
 .Quote {
     @extend .post-container;
     border: none;
-    padding: 8px 8px 24px 8px;
+    padding: 4px 8px 4px 4px;
 }
 
 .quote-text {
@@ -92,6 +93,10 @@ body {
         margin-top: 4px;
         padding-left: 8px;
     }
+
+    .post_divider {
+        clip-path: url('/dot_divider.svg');
+    }
 }
 
 .post_content {
@@ -125,8 +130,9 @@ body {
     max-width: 480px;
 }
 
-.Aside {
+.aside {
     display: none;
+    margin-top: 24px;
 }
 
 .ava {
@@ -197,6 +203,8 @@ body {
     }
 }
 
+
+
 .link {
     color: $accent_color;
     line-height: 18px;
@@ -235,6 +243,9 @@ body {
     list-style-type: lower-latin;
 }
 
+.wallet {
+    display: inline-flex;
+}
 
 footer {
     font-size: 0.6rem;
@@ -243,22 +254,27 @@ footer {
     margin-left: 16px;
 }
 
-@media only screen and (min-width: 768px) {
-    .todelete{
-        display: inline-flex;
+@media (min-width: 768px) {
+    .Wallet{
+        display: none
     }
 
-    .My-card {
-        display: inline-flex;
+    .aside {
+        display: none;
     }
-
-    .Aside {
+    .mobile_menu {
         display: inline-flex;
+        margin: 0 auto;
+        padding: 0;
     }
 }
 
-@media screen and (min-width: 320px){
-    .Aside {
+[hidden] {
+    display: none !important;
+}
+
+@media all and (min-width: 320px){
+    .aside {
         display: inline;
     }
 
@@ -268,4 +284,9 @@ footer {
             max-width: 500px;
         }
     }
+
+    .mobile_menu {
+        visibility: visible;
+    }
+
 }

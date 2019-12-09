@@ -5,32 +5,29 @@ import Profile from './Profile/Profile';
 import Post from './Post/Post';
 import Menu from './Menu/Menu';
 import MainButton from './Buttons/MainButton';
+import MobileMenu from './Menu/MobileMenu';
 
 function App() {
     return(
-       <div class='container'>
-            <Grid container 
-            />
+       
+       <div className='container'>
+            <Grid fluid />
+                <Row className="mobile_menu" hidden><MobileMenu/></Row>
                 <Row className="content">
-                    <Col className="Aside" sm={3} lg={3}>
+                    <Col className="aside" sm={3} lg={3}>
                         <Profile/>
                         <Menu/>
-                        <div  style={{ margin: "24px" }} ><MainButton caption="Write post!"/></div>
+                        <div><MainButton caption="Write post!"/></div>
                     </Col>
 
-                    <Col className="postik" xs={12} md={6}>
-                        <div><Post/></div>
+                    <Col className="postik" xs={12} sm={12} lg={6}>
+                        <div><Post author_name="Mathew" author_nickname="@catchmccounaghey"/></div>
                     </Col>
-                    <Col lg={3}>
-                        <div class="col todelete"></div>
+                    <Col className="wallet" xs={3} lg={3} sm={3} >
+                        <div></div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col lg={12}><Footer/></Col>
-                </Row>
-                <Row>
-                    <Col lg={12}><Footer/></Col>
-                </Row>
+
            </div>
     );
 }
