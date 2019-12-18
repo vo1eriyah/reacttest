@@ -24,14 +24,19 @@ body {
 }
 
 .container {
-    //margin-top: 24px;
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 1200px;
+    justify-content: left;
+
 }
 
 
 .wallet {
     display: none;
-    width: 100%;
-    flex-wrap: wrap;
+    width: 30%;
     align-items: stretch;
     height: 100px;
     margin-top: 16px;
@@ -40,7 +45,7 @@ body {
 
 .post-container {
     margin-top: 24px;
-    width: 100%;
+    width: 60%;
     height: 100%;
     flex-wrap: wrap;
     align-items: stretch;
@@ -133,6 +138,7 @@ body {
 .aside {
     display: none;
     margin-top: 24px;
+    width: 30%;
 }
 
 .ava {
@@ -209,7 +215,7 @@ body {
     color: $accent_color;
     line-height: 18px;
 }
-.main-button{
+.main_button{
     background: #8566FF;
     border-radius: 4px;
     width: 100%;
@@ -244,7 +250,7 @@ body {
 }
 
 .wallet {
-    display: inline-flex;
+    display: inline;
 }
 
 footer {
@@ -254,18 +260,28 @@ footer {
     margin-left: 16px;
 }
 
+.mobile_menu {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .Wallet{
-        display: none
+        display: none;
     }
 
     .aside {
-        display: none;
+        display: inline;
     }
+
     .mobile_menu {
-        display: inline-flex;
+        display: flex;
         margin: 0 auto;
         padding: 0;
+    }
+
+    .post-container {
+        width: 100%;
+        
     }
 }
 
@@ -273,7 +289,7 @@ footer {
     display: none !important;
 }
 
-@media all and (min-width: 320px){
+@media (min-width: 320px){
     .aside {
         display: inline;
     }
@@ -286,7 +302,10 @@ footer {
     }
 
     .mobile_menu {
-        visibility: visible;
+        display: inline;
     }
-
+    .post-container {
+        width: 100%;
+        
+    }
 }

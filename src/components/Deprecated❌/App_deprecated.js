@@ -17,10 +17,37 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 )
 */
 
-function App_deprecated(props) {
+/*function App_deprecated(props) {
   return (
     <div></div>
   );
+}*/
+
+function App() {
+  return(
+     
+     <div className='container'>
+          <Grid fluid />
+              <Row className="mobile_menu" ><MobileMenu/></Row>
+              <Row className="content">
+                  <Col className="aside" xs={0} sm={0} lg={3}>
+                      <Profile/>
+                      <Menu/>
+                      <div><MainButton caption="Write post!"/></div>
+                  </Col>
+
+                  <Col className="postik" xs={12} sm={12} lg={6}>
+                      <div><Post author_name="Mathew" author_nickname="@catchmccounaghey"/></div>
+                  </Col>
+                  <Col className="wallet" xs={0} lg={3} sm={3} >
+                      <div></div>
+                  </Col>
+              </Row>
+
+         </div>
+  );
 }
 
+
 export default App_deprecated;
+
