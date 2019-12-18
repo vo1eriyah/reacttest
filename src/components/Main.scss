@@ -12,96 +12,48 @@ $accent_color: #A18AFF;
 
 body {
     margin: 0 auto;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
     background-color: $background_color;
     color: $text_color;
     font-family: $font;
 }
 
-.container {
-    margin-top: 24px;
+
+.my_container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: stretch;
     max-width: 1200px;
-    justify-content: left;
-
+    background-color: royalblue;  
+    margin-top: 16px;  
 }
 
+.col_third {
+    margin: 8px;
+    background-color: salmon;
+    flex: 1 0 287px;
+}
+
+.col_half {
+    margin: 8px;
+    flex: 2 1 574px; //(<flex-grow> | <flex-shrink> | <flex-basis>)
+}
+
+.mobile_menu {
+    display: flex;
+}
 
 .wallet {
-    display: none;
-    width: 30%;
-    align-items: stretch;
     height: 100px;
-    margin-top: 16px;
     background-color: indigo;
 }
 
+
 .post-container {
-    margin-top: 24px;
-    width: 60%;
-    height: 100%;
-    flex-wrap: wrap;
-    align-items: stretch;
     background: $card_background_color;
     border: 1px solid $card_border_color;
     border-radius: 4px;
     padding: 16px 8px 8px 8px;
-}
-
-.Quote {
-    @extend .post-container;
-    border: none;
-    padding: 4px 8px 4px 4px;
-}
-
-.quote-text {
-    font-style: italic;
-    font-size: $paragraph_text_size;
-    line-height: 18px;
-}
-
-.Date{
-    font-size: 0.9rem;
-    margin-right: 16px;
-}
-
-.author_photo {
-    padding-left: 16px;
-}
-
-.author_info {
-    margin-left: 16px;
-
-    .author_name {
-        font-weight: 600;
-    }
-
-    .author_nickname {
-        color: $secondary_text_color;
-    }
-
-    .location {
-        display: inline-flex;
-        margin-top: 4px;
-        padding-right: 8px;
-    }
-
-    .post_date {
-        color: $secondary_text_color;
-        margin-top: 4px;
-        padding-left: 8px;
-    }
-
-    .post_divider {
-        clip-path: url('/dot_divider.svg');
-    }
 }
 
 .post_content {
@@ -126,62 +78,6 @@ body {
     }
 }
 
-.My-card {
-    display: none;
-    background-color: #7958FD;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-    padding: 0.8rem 1rem 1rem 1rem;
-    max-width: 480px;
-}
-
-.aside {
-    display: none;
-    margin-top: 24px;
-    width: 30%;
-}
-
-.ava {
-    border-radius: 3rem;
-    border: 1px solid $text_color ;
-    display: flex;
-    flex: 1;
-    margin: 0px 4px 4px 4px;
-    background-color: $secondary_text_color;
-}
-
-.avatar {
-    display: inline-flex;
-}
-
-
-.self-info {
-    padding: 0px 32px 32px 24px;
-
-    .bio-name {
-        font-size: 17px;
-        font-weight: 600;
-        letter-spacing: -0.41;
-        line-height: 20px;
-        display: inline-flex;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 1;
-    }
-
-    .bio-nickname {
-        font-size: 17px;
-        font-weight: 600;
-        font-style: italic;
-        letter-spacing: 0.7px;
-        white-space: nowrap;
-        color: $secondary_text_color;
-        line-height: 20px;
-        display: inline-flex;
-    }
-}
-
-
 .main-menu {
     margin-top: 32px;
 }
@@ -199,8 +95,8 @@ body {
 
 .menu-item {
     height: 48px;
-    display: inline-flex;
-    padding: 8px 8px 8px 8px;
+    width: 100%;
+    padding: 8px 0px 8px 0px;
 
     .icon {
         width: 24px;
@@ -209,103 +105,9 @@ body {
     }
 }
 
-
-
-.link {
-    color: $accent_color;
-    line-height: 18px;
-}
-.main_button{
-    background: #8566FF;
-    border-radius: 4px;
-    width: 100%;
-    min-height: 48px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.3px;
-    color: #f2f2f2;
-    /*padding-top: 14px;*/
-    padding-left: 12px;
-    padding-right: 12px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: none;
-    -webkit-line-clamp: 1;
-}
-
-.main-button:hover {
-    background: #8A6FF5;
-    transition: 0.5ms;
-}
-
-.My-card h3 {
-    margin-inline-start: 0.3em;
-}
-
-.My-card ul li{
-    list-style-type: lower-latin;
-}
-
-.wallet {
-    display: inline;
-}
-
-footer {
-    font-size: 0.6rem;
-    position: fixed;
-    bottom: 0;
-    margin-left: 16px;
-}
-
-.mobile_menu {
-    display: none;
-}
-
-@media (min-width: 768px) {
-    .Wallet{
+@media (min-width: 320px){
+    .mobile_menu {
         display: none;
     }
 
-    .aside {
-        display: inline;
-    }
-
-    .mobile_menu {
-        display: flex;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .post-container {
-        width: 100%;
-        
-    }
-}
-
-[hidden] {
-    display: none !important;
-}
-
-@media (min-width: 320px){
-    .aside {
-        display: inline;
-    }
-
-    .post_content{
-        .post_photo_solo {
-            width: auto;
-            max-width: 500px;
-        }
-    }
-
-    .mobile_menu {
-        display: inline;
-    }
-    .post-container {
-        width: 100%;
-        
-    }
 }

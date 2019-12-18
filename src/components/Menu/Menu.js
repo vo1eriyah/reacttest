@@ -10,13 +10,13 @@ import DealsIcn from './deals.svg'
 class Menu extends React.Component{
     render() {
         return(
-            <Grid className="main-menu">
-                <Row><MenuItem icon={SettingsIcn} title="Settings"/></Row>
-                <Row><MenuItem icon={DialogsIcn} title="Dialogs"/></Row>
-                <Row><MenuItem icon={DealsIcn} title="My Deals"/></Row>
-                <Row><MenuItem icon={NotificationsIcn} title="Notifications"/></Row>
+            <div className="main-menu">
+                <MenuItem icon={SettingsIcn} title="Settings"/>
+                <MenuItem icon={DialogsIcn} title="Dialogs"/>
+                <MenuItem icon={DealsIcn} title="My Deals"/>
+                <MenuItem icon={NotificationsIcn} title="Notifications"/>
 
-            </Grid>
+            </div>
         );
     }
 }
