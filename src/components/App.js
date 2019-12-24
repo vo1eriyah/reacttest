@@ -12,20 +12,21 @@ function App() {
        
        <div className='my_container'>
                 <div className="mobile_menu" ><MobileMenu/></div>
-                <div className="col_third">
-                    <aside>
-                        <Profile/>
-                        <Menu/>
-                        <MainButton caption="Write post!"/>
-                    </aside>
-                    </div>
-                    <div className="col_half">
-                        <Post author_name="Mathew" author_nickname="@catchmccounaghey"/>
-                    </div> 
-                    <div className="col_third">                 
-                        <div className="wallet" ></div>
-                    </div>  
 
+                    <div className="col_third">
+                        <aside>
+                            <Profile/>
+                            <Menu/>
+                            <MainButton caption="Write post!"/>
+                        </aside>
+                        </div>
+                        <div className="col_half">
+                            <Post author_name="Mathew" author_nickname="@catchmccounaghey"/>
+                        </div> 
+                        <div className="col_third">                 
+                            <div className="wallet" ></div>
+                        </div>
+                    
            </div>
     );
 }

@@ -10,23 +10,27 @@ $accent_color: #A18AFF;
 /////////////////////////////////////
 
 
-body {
+html, body {
     margin: 0 auto;
     background-color: $background_color;
     color: $text_color;
     font-family: $font;
+    height: 100%;
 }
 
 
 .my_container {
     display: flex;
+    height: 100%;
+    max-width: 1200px;
+    align-self: center;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: stretch;
-    max-width: 1200px;
-    background-color: royalblue;  
-    margin-top: 16px;  
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 16px; 
 }
+
 
 .col_third {
     margin: 8px;
