@@ -373,7 +373,7 @@ $gutter: 1.5em;
 
   .btc_address {
     display: block;
-    width: 100%;
+    width: 280px;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -388,13 +388,14 @@ $gutter: 1.5em;
       font-weight: bold;
       font-size: 34px;
       line-height: 41px;
+      width: 280px;
     }
   
     .balance_usd {
       @extend h4;
       font-style: italic;
       display: block;
-      width: 100%;
+      width: 280px;
     }
 
     .topup_block {
