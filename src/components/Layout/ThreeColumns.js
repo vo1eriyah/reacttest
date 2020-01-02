@@ -1,10 +1,10 @@
 import React from 'react'
-import Profile from './Profile/Profile';
-import Post from './Post/Post';
-import Menu from './Menu/Menu';
-import MainButton from './Buttons/MainButton';
-import MobileMenu from './Menu/MobileMenu';
-import Wallet from './Wallet';
+import Profile from '../Profile/Profile';
+import Post from '../Post/Post';
+import Menu from '../Menu/Menu';
+import MainButton from '../Buttons/MainButton';
+import MobileMenu from '../Menu/MobileMenu';
+import Wallet from '../Wallet/Wallet';
 
 function Threecolumns () {
     return(

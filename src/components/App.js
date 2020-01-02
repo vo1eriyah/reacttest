@@ -6,10 +6,10 @@ import Post from './Post/Post';
 import Menu from './Menu/Menu';
 import MainButton from './Buttons/MainButton';
 import MobileMenu from './Menu/MobileMenu';
-import MyGrid from './MyGrid';
+import MyGrid from './Layout/MyGrid';
 import Quote from './Profile/Quote';
-import Twocolumns from './Twocolumns';
-import Threecolumns from './ThreeColumns';
+import Twocolumns from './Layout/Twocolumns';
+import Threecolumns from './Layout/ThreeColumns';
 
 
 function App() {

@@ -1,9 +1,9 @@
 import React from 'react'
-import Profile from './Profile/Profile';
-import Post from './Post/Post';
-import Menu from './Menu/Menu';
-import MainButton from './Buttons/MainButton';
-import MobileMenu from './Menu/MobileMenu';
+import Profile from '../Profile/Profile';
+import Post from '../Post/Post';
+import Menu from '../Menu/Menu';
+import MainButton from '../Buttons/MainButton';
+import MobileMenu from '../Menu/MobileMenu';
 
 
 function Twocolumns () {
