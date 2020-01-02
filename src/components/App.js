@@ -7,12 +7,17 @@ import Menu from './Menu/Menu';
 import MainButton from './Buttons/MainButton';
 import MobileMenu from './Menu/MobileMenu';
 import MyGrid from './MyGrid';
+import Quote from './Profile/Quote';
+import Twocolumns from './Twocolumns';
+import Threecolumns from './ThreeColumns';
 
 
 function App() {
     return(
        <div >
-           <MyGrid/>
+           
+
+           <Threecolumns/>
        </div>
     );
 }

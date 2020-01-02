@@ -133,16 +133,18 @@ function MyGrid() {
         </div>
 
         <div class="Grid Grid--gutters Grid--1of3 Grid--nested">
-    <div class="Grid-cell"><div class="Demo content-1of3">1/3</div></div>
-    <div class="Grid-cell"><div class="Demo">     
-      <div class="Grid Grid--gutters Grid--1of3 Grid--nested">
-        <div class="Grid-cell"><div class="Demo content-1of3">1/3</div></div>
-        <div class="Grid-cell"><div class="Demo">
-          <div class="Grid Grid--gutters Grid--1of3 Grid--nested">
             <div class="Grid-cell"><div class="Demo content-1of3">1/3</div></div>
-            <div class="Grid-cell"><div class="Demo">auto</div></div>
-          </div>        
-        </div></div>
+            <div class="Grid-cell">
+                <div class="Demo">     
+                    <div class="Grid Grid--gutters Grid--1of3 Grid--nested">
+                        <div class="Grid-cell"><div class="Demo content-1of3">1/3</div></div>
+                         <div class="Grid-cell"><div class="Demo">
+                    <div class="Grid Grid--gutters Grid--1of3 Grid--nested">
+                        <div class="Grid-cell"><div class="Demo content-1of3">1/3</div></div>
+                        <div class="Grid-cell"><div class="Demo">auto</div></div>
+                    </div>        
+            </div>
+            </div>
       </div>      
     </div>
     </div>

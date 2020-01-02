@@ -150,13 +150,14 @@ body {
 
 .self-info {
     padding: 0px 32px 32px 24px;
+    display: block;
 
     .bio-name {
         font-size: 17px;
         font-weight: 600;
         letter-spacing: -0.41;
         line-height: 20px;
-        display: inline-flex;
+        //display: inline-flex;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-line-clamp: 1;

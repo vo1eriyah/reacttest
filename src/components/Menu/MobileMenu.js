@@ -10,12 +10,10 @@ class MobileMenu extends React.Component {
     render () {
         return (
             <div>
-                <Grid className="mobile_menu">
-                    <Row xs={12}>
-                        <Col xs={6} className="mobile_menu_avatar"><Avatar width="32" height="32"/></Col>
-                        <Col xs={6} classname="mobile_menu_wallet"></Col>
-                    </Row>
-                </Grid>
+                <div className="Mobile-menu">
+                    <Avatar height="32" width="32" imgurl="https://scontent.fiev1-1.fna.fbcdn.net/v/t1.0-9/34179438_1798769306858268_5254876844385107968_o.jpg?_nc_cat=106&_nc_oc=AQlkiFUEdv7suFUNZFZxZZ6fMN8w-2LSRZhDmcnZ41lT8e3s5XU7w86wgmy5b9eREKA&_nc_ht=scontent.fiev1-1.fna&oh=b525227803f5e3b2dcb8a383e0a89c21&oe=5E5661CD"/>
+                    <div className="wallet"></div>
+                </div>
             </div>
 
         )       
