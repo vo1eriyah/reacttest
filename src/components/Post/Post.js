@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Avatar from '../Profile/Avatar';
+import ShareBlock from './ShareBlock';
 
 
 class Post extends React.Component{
@@ -29,7 +30,11 @@ class Post extends React.Component{
                             
                             <div className="post_photo_solo"><img src={this.props.photourl}></img></div>
                         </p>
+
+                        <ShareBlock/>
                     </div>
+
+
                 </div>
             </div>
         );

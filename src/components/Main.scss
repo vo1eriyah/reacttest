@@ -111,27 +111,19 @@ $gutter: 1.5em;
 }
 
 .post-container {
-    margin-top: 24px;
+    margin-top: 16px;
     height: 100%;
     background: $card_background_color;
     border: 1px solid $card_border_color;
     border-radius: 4px;
     padding: 16px 8px 8px 8px;
-
-    .post_content {
-    }
 }
 
-.Date{
-    font-size: 0.9rem;
-    margin-right: 16px;
-}
 .post-auth-desc {
   display: block;
   
   .author_photo {
     padding-left: 16px;
-    //display: inline-block;
     position: absolute;
     width: 32px;
   }
@@ -140,8 +132,8 @@ $gutter: 1.5em;
 
 .author_info {
     margin-left: 52px;
-    //display: inline-block;
     position: relative;
+    
 
     .author_name {
         font-weight: 600;
@@ -177,6 +169,7 @@ $gutter: 1.5em;
     padding-right: 16px;
     font-weight: 300;
     letter-spacing: 0.5px;
+    line-height: 22px;
 
     .post_photo_solo {
         max-width: 1200px;
@@ -192,6 +185,46 @@ $gutter: 1.5em;
             border-radius: 4px;
         }
     }
+
+    .divider {
+      width: 100%;
+      display: block;
+
+      hr {
+        border: 0.5px solid $secondary_text_color;
+        opacity: 0.5;
+      }
+    }
+    .ShareBlock {
+      width: 100%;
+      height: 44px;
+      display: -webkit-box;
+      -webkit-box-align: center;
+
+      font-weight: 400;
+      //font-size: 13px;
+
+
+      .like {
+        margin-right: 24px;
+      }
+
+      .icon {
+        height: 24px;
+        width: 24px;
+        position: absolute;
+      }
+
+      .count {
+        position: relative;
+        padding-left: 28px;
+        color: $secondary_text_color;
+      }
+
+      .active{
+        color: $accent_color;
+      }
+  }
 }
 
 .main-menu {
@@ -204,16 +237,16 @@ $gutter: 1.5em;
       -webkit-box-align: center;
 
       .menu-link {
-        position: absolute;
+        position: relative;
         font-weight: bold;
         font-size: 17px;
         line-height: 20px;
         letter-spacing: 0.7px;
-        padding-left: 8px;
+        padding-left: 32px;
     }
 
       .icon{
-        position: relative;
+          position: absolute;
           width: 24px;
           height: 24px;
       }
@@ -232,42 +265,34 @@ $gutter: 1.5em;
     text-align: center;
     letter-spacing: 0.3px;
     color: #f2f2f2;
-    padding-left: 12px;
-    padding-right: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
     border: none;
     -webkit-line-clamp: 1;
+    padding: 12px 12px 12px 12px;
 
-    :hover {
-      background: #8A6FF5;
+    &:hover {
+      background: darken(#8A6FF5, 5%);
       transition: 0.5ms;
   }
 }
 
 .secondary_button {
-  width: 100%;
-  height: 48px;
+  @extend .main_button;
   background: rgba(161, 138, 255, 0.2);
   color: $accent_color;
   border: 2px solid $accent_color;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 12px 12px 12px 12px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 20px;
-  text-align: center;
-  letter-spacing: 0.3px;
 
+  &:hover {
+    background: darken(rgba(161, 138, 255, 0.4), 10%);
+    color: lighten($accent_color, 10%);
+    transition: 0.9ms;
+  }
 }
 
 .ava {
     border-radius: 100rem;
     border: 1px solid $text_color ;
-    //display: flex;
-    flex: 1;
     margin: 0px 4px 4px 4px;
     background-color: $secondary_text_color;
 }
@@ -277,12 +302,9 @@ $gutter: 1.5em;
     position: absolute;
 }
 
-.CTA-button {
-    margin-top: 32px;
-}
+
 
 .self-info {
-    //padding: 0px 32px 32px 24px;
     display: inline-block;
     margin: 0 auto;
     padding-top: 4px;
@@ -291,22 +313,22 @@ $gutter: 1.5em;
 
     .bio-name {
       @extend h4;
-        display: inline-block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 1;
-        width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      width: 100%;
     }
 
     .bio-nickname {
-        font-size: 17px;
-        font-weight: 600;
-        font-style: italic;
-        letter-spacing: 0.7px;
-        white-space: nowrap;
-        color: $secondary_text_color;
-        line-height: 20px;
-        width: 100%;
+      font-size: 17px;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.7px;
+      white-space: nowrap;
+      color: $secondary_text_color;
+      line-height: 20px;
+      width: 100%;
     }
 }
 
@@ -335,46 +357,67 @@ $gutter: 1.5em;
 
 .My-Aside {
   padding-top: 24px;
-  position: fixed;
-  max-width: 290px;
+  max-width: 280px;
+
+  .CTA-button {
+    margin-top: 32px;
+}
 }
 
 .Wallet {
-  padding-top: 24px;
+  padding-top:48px;
+  height: 302px;
   text-align: center;
- //background: url('./Wallet/wallet background.svg');
-}
-.btc_address {
-  display: block;
-  width: 100%;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 17px;
-  color: $secondary_text_color;
-}
-  .balance {
+  background: url('./Wallet/wallet_background.svg') no-repeat;
+  position: relative;
+
+  .btc_address {
     display: block;
     width: 100%;
-    margin-top: 12px;
     font-style: normal;
     font-weight: bold;
-    font-size: 34px;
-    line-height: 41px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $secondary_text_color;
   }
+    .balance {
+      display: block;
+      width: 100%;
+      margin-top: 12px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 41px;
+    }
+  
+    .balance_usd {
+      @extend h4;
+      font-style: italic;
+      display: block;
+      width: 100%;
+    }
 
-  .balance_usd {
-    @extend h4;
-    font-style: italic;
-    display: block;
-    width: 100%;
-  }
-.topup_block {
-  display: block;
-  width: 100%;
-  margin-top: 32px;
+    .topup_block {
+      display: block;
+      width: 248px;
+      margin-top: 32px;
+      margin-right: 24px;
+      padding: 0px 16px;
+    }       
 }
 
+@media all and (max-width: 800px){
+  .aside-2 {
+    display: none;
+  }
+  .aside-1 {
+    display: none;
+  }
+  .Mobile-menu {
+    display: flex;
+    margin-bottom: 32px;
+  }
+}
 @media all and (max-width: 600px) {
     .Wallet {
         display: none;
@@ -382,16 +425,13 @@ $gutter: 1.5em;
 
     .Mobile-menu {
         display: flex;
+        margin-bottom: 32px;
     }
 
     .My-Aside {
         display: none;
-        position: relative;
     }
 
-    .post-container:first-of-type {
-      margin-top: 64px;
-    }
 }
 
 
