@@ -15,8 +15,6 @@ import Threecolumns from './Layout/ThreeColumns';
 function App() {
     return(
        <div >
-           
-
            <Threecolumns/>
        </div>
     );

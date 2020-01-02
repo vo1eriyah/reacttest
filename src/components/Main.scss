@@ -9,6 +9,10 @@ $paragraph_text_size: 15px;
 $accent_color: #A18AFF;
 /////////////////////////////////////
 
+// GRID colors:
+$demoMain: rgba(51, 153, 204,.2);
+$demoMainDark: rgba(51, 153, 204,.6);
+$demoBorder: #A18AFF;
 
 html, body {
     margin: 0 auto;
@@ -18,22 +22,10 @@ html, body {
     height: 100%;
 }
 
-
-// VARIALBLES
-// GRID colors:
-$demoMain: rgba(51, 153, 204,.2);
-$demoMainDark: rgba(51, 153, 204,.6);
-$demoBorder: #33cccc;
-$demoHolly: rgba(102, 51, 255, 0.1);
-$demoHollyDark: rgba(102, 51, 255, 0.25);
-
-
-
 .wrapper{
   max-width: 1200px;
   margin: auto;
   padding: 16px;
-  //border: 1px solid red;
 }
 
 /*Basic Grid Styles*/
@@ -42,15 +34,12 @@ $demoHollyDark: rgba(102, 51, 255, 0.25);
   flex-flow: row; 
   flex-wrap: wrap;
 }
-.u-textCenter {
- text-align: center;
-}
+
 .Grid-cell {
   flex: 1;
 }
 
 .Demo {
-  //padding: .8em 1em 0;
   margin-bottom: 1em;
   background: $demoMain;
   transition: background-color 0.3s ease;
@@ -58,7 +47,6 @@ $demoHollyDark: rgba(102, 51, 255, 0.25);
   border-radius: 3px;
   &:after {
     display: block;
-    //margin-top: .8em;
     height: 1px;
    }
   &:hover {
@@ -67,7 +55,6 @@ $demoHollyDark: rgba(102, 51, 255, 0.25);
 }
 
 // Grid Style Modifiers
-
 /* With gutters*/
 $gutter: 1em;
 .Grid--gutters {
@@ -132,16 +119,27 @@ $gutter: 1em;
     font-size: 0.9rem;
     margin-right: 16px;
 }
-
-.author_photo {
+.post-auth-desc {
+  display: block;
+  
+  .author_photo {
     padding-left: 16px;
+    //display: inline-block;
+    position: absolute;
+    width: 32px;
+  }
+  
 }
 
 .author_info {
-    margin-left: 16px;
+    margin-left: 52px;
+    //display: inline-block;
+    position: relative;
 
     .author_name {
         font-weight: 600;
+        display: inline-block;
+        width: 100%;
     }
 
     .author_nickname {
@@ -179,7 +177,7 @@ $gutter: 1em;
 
     .post_photo_solo {
         img {
-            max-width: 500px;
+            max-width: 1000px;
             width: 100%;
             height: auto;
             border-radius: 4px;
@@ -188,30 +186,29 @@ $gutter: 1em;
 }
 
 .main-menu {
-    margin-top: 32px;
-}
+  margin-top: 32px;
 
-.menu-link {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 20px;
-    letter-spacing: 0.7px;
-    box-align: center;
-    //display: inline-flex;
-    padding-left: 8px;
-}
+  .menu-item {
+    margin-top: 12px;
+      height: 48px;
+      display: -webkit-box;
+      -webkit-box-align: center;
 
-.menu-item {
-    height: 48px;
-    //display: inline-flex;
-    padding: 8px 8px 8px 8px;
-
-    .icon {
-        width: 24px;
-        height: 24px;
-        display: inline-flex;
+      .menu-link {
+        position: absolute;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 20px;
+        letter-spacing: 0.7px;
+        padding-left: 8px;
     }
+
+      .icon{
+        position: relative;
+          width: 24px;
+          height: 24px;
+      }
+  }
 }
 
 .main_button{
@@ -251,6 +248,7 @@ $gutter: 1em;
 
 .avatar {
     display: inline-block;
+    position: absolute;
 }
 
 .CTA-button {
@@ -258,18 +256,23 @@ $gutter: 1em;
 }
 
 .self-info {
-    padding: 0px 32px 32px 24px;
+    //padding: 0px 32px 32px 24px;
     display: inline-block;
+    margin: 0 auto;
+    padding-top: 4px;
+    position: relative;
+    margin-left: 64px;
 
     .bio-name {
+        display: inline-block;
         font-size: 17px;
         font-weight: 600;
         letter-spacing: -0.41;
         line-height: 20px;
-        //display: inline-flex;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-line-clamp: 1;
+        width: 100%;
     }
 
     .bio-nickname {
@@ -280,7 +283,7 @@ $gutter: 1em;
         white-space: nowrap;
         color: $secondary_text_color;
         line-height: 20px;
-        //display: inline-flex;
+        width: 100%;
     }
 }
 

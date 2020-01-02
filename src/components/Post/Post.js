@@ -16,11 +16,9 @@ class Post extends React.Component{
                         <div className="author_photo"><Avatar width="32" height="32"/></div>
                         <div className="author_info">
                             <span className="author_name">{this.props.author_name} <i className="author_nickname">{this.props.author_nickname}</i></span>
-                            <div>
-                                <div className="location"><a className="link" href="#">Jl. Pantai Kuta</a></div> 
-                                <div className="post_divider"></div>                    
-                                <div className="post_date">12.12.2019</div>
-                            </div>
+                            <span className="location"><a className="link" href="#">Jl. Pantai Kuta</a></span> 
+                            <span className="post_divider"></span>                    
+                            <span className="post_date">12.12.2019</span>
                         </div>
                     </div>
 

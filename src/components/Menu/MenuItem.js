@@ -5,7 +5,7 @@ class MenuItem extends React.Component{
         return(
             <div className="menu-item">
                 <span className="icon"><img src={this.props.icon}/></span>
-                <a className="menu-link">{this.props.title}</a>
+                <span className="menu-link"><a >{this.props.title}</a></span>
             </div>
         )
         }

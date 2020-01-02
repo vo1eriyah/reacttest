@@ -12,7 +12,7 @@ function Threecolumns () {
             <div class="Grid Grid--full"><div class="Grid-cell"><MobileMenu/></div></div>
             <div class="Grid Grid--gutters Grid--twoasides">
                 <div class="Grid-cell feed">
-                    <Post/>
+                    <Post author_nickname="@maccounaughey"/>
                 </div>
                 <div class="Grid-cell aside aside-1">
                     <div className="My-Aside">

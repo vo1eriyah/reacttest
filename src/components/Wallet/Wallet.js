@@ -7,7 +7,7 @@ class Wallet extends React.Component {
 
     render (props) {
         return (
-            <div className="DemoWallet">Here will be your wallet🤓</div>
+            <div className="Demo Wallet">Here will be your wallet🤓</div>
         );
     }
 }
