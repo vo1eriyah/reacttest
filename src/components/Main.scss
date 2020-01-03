@@ -1,4 +1,6 @@
 /////////////////////////////////////
+
+
 $font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 $text_color: #f2f2f2;
 $secondary_text_color: #878b9e;
@@ -8,6 +10,7 @@ $card_border_color: #272D51;
 $paragraph_text_size: 15px;
 $accent_color: #A18AFF;
 $background_secondary: #1B1F36;
+$button_background: #8566FF;
 /////////////////////////////////////
 
 // GRID colors:
@@ -146,120 +149,6 @@ $gutter: 1.5em;
   align-self: center;
 }
 
-.post-container {
-    margin-top: 16px;
-    height: 100%;
-    background: $card_background_color;
-    border: 1px solid $card_border_color;
-    border-radius: 4px;
-    padding: 16px 16px 0px 16px;
-}
-
-.post-auth-desc {
-  display: block;
-  
-  .author-photo {
-    position: absolute;
-    width: 32px;
-  }
-  
-}
-
-.author-info {
-    margin-left: 40px;
-    position: relative;
-    
-
-    .author-name {
-      @extend h4;
-        font-weight: 600;
-        display: inline-block;
-        width: 100%;
-    }
-
-    .author-nickname {
-        color: $secondary_text_color;
-    }
-
-    .location {
-        display: inline-block;
-        margin-top: 4px;
-        font-size: 13px;
-
-        &:after {
-          content: '';
-          background: url('./Post/dot_divider.svg') no-repeat;
-          background-position: center center;
-          width: 16px;
-          height: 16px;
-          padding-left: 24px;
-        }
-    }
-
-    .post-date {
-      @extend caption; 
-    }
-}
-
-.post-content {
-    .post_photo_solo {
-        max-width: 1200px;
-        padding-right: 16px;
-        padding-top: 16px;
-    }
-
-    .post_photo_solo {
-        img {
-            max-width: 1000px;
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-    }
-
-    .divider {
-      width: 100%;
-      display: block;
-
-      hr {
-        border: 0.5px solid $secondary_text_color;
-        opacity: 0.5;
-      }
-    }
-
-
-    .ShareBlock {
-      width: 100%;
-      height: 44px;
-      display: -webkit-box;
-      -webkit-box-align: center;
-
-      font-weight: 400;
-      //font-size: 13px;
-
-
-      .like {
-        margin-right: 24px;
-      }
-
-      .icon {
-        height: 24px;
-        width: 24px;
-        position: absolute;
-      }
-
-      .count {
-        position: relative;
-        padding-left: 28px;
-        color: $secondary_text_color;
-      }
-
-      .liked{
-        color: $accent_color;
-      }
-  }
-}
-
 .main-menu {
   margin-top: 48px;
 
@@ -289,42 +178,9 @@ $gutter: 1.5em;
   }
 }
 
-.main_button{
-    background: #8566FF;
-    border-radius: 4px;
-    width: 100%;
-    min-height: 48px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.3px;
-    color: #f2f2f2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: none;
-    -webkit-line-clamp: 1;
-    padding: 12px 12px 12px 12px;
 
-    &:hover {
-      background: darken(#8A6FF5, 5%);
-      transition: 0.5ms;
-  }
-}
 
-.secondary_button {
-  @extend .main_button;
-  background: rgba(161, 138, 255, 0.2);
-  color: $accent_color;
-  border: 2px solid $accent_color;
 
-  &:hover {
-    background: darken(rgba(161, 138, 255, 0.4), 10%);
-    color: lighten($accent_color, 10%);
-    transition: 0.9ms;
-  }
-}
 
 .ava {
     border-radius: 100rem;
@@ -369,7 +225,6 @@ $gutter: 1.5em;
 }
 
 .Quote {
-    @extend .post-container;
     background-color: $background_secondary;
     border: none;
     padding: 2px 8px 2px 4px;

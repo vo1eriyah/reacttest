@@ -4,7 +4,6 @@ import Footer from './Footer/Footer';
 import Profile from './Profile/Profile';
 import Post from './Post/Post';
 import Menu from './Menu/Menu';
-import MainButton from './Buttons/MainButton';
 import MobileMenu from './Menu/MobileMenu';
 import MyGrid from './Layout/MyGrid';
 import Quote from './Profile/Quote';

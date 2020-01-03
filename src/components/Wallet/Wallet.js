@@ -1,5 +1,5 @@
 import React from 'react'
-import SecondaryButton from '../Buttons/SecondaryButton';
+import SecondaryButton from '../Buttons/SecondaryButton/SecondaryButton';
 
 class Wallet extends React.Component {
     constructor (Wallet) {

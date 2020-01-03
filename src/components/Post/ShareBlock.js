@@ -2,6 +2,7 @@ import React from 'react'
 import BTClikeIcn from './BTClike.svg'
 import CommentIcn from './comment.svg'
 import RepostCountIcn from './repost.svg'
+import './post.scss';
 
 class ShareBlock extends React.Component {
     constructor(ShareBlock){

@@ -1,0 +1,25 @@
+@import 'src/components/Main.scss';
+
+.main_button{
+    background: $button_background;
+    border-radius: 4px;
+    width: 100%;
+    min-height: 48px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #f2f2f2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+    -webkit-line-clamp: 1;
+    padding: 12px 12px 12px 12px;
+
+    &:hover {
+      background: darken(#8A6FF5, 5%);
+      transition: 0.5ms;
+  }
+}
