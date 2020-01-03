@@ -1,9 +1,10 @@
 import React from 'react'
 import Profile from '../Profile/Profile';
 import Post from '../Post/Post';
-import Menu from '../Menu/Menu';
+import Menu from '../Menu/MainMenu/Menu';
 import MainButton from '../Buttons/MainButton/MainButton';
-import MobileMenu from '../Menu/MobileMenu';
+import MobileMenu from '../Menu/MobileMenu/MobileMenu';
+import style from './Grid.scss'
 
 
 function Twocolumns () {

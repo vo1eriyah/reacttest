@@ -5,7 +5,7 @@ import SettingsIcn from './settings.svg'
 import DialogsIcn from './dialogs.svg'
 import NotificationsIcn from './notifications.svg'
 import DealsIcn from './deals.svg'
-
+import style from './MainMenu.scss'
 
 class Menu extends React.Component{
     render() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import Avatar from '../Profile/Avatar';
+import Avatar from '../../Profile/Avatar';
 import walletIcn from './walletIcn.svg'
 
 class MobileMenu extends React.Component {

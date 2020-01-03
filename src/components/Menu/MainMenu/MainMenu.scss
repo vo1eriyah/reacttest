@@ -1,0 +1,33 @@
+@import 'src/components/Main.scss';
+
+
+.main-menu {
+    margin-top: 48px;
+  
+    .menu-item {
+        margin-top: 12px;
+        height: 48px;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        opacity: 0.7;
+  
+        .menu-link {
+          @extend h4;
+          position: relative;
+          letter-spacing: 0.7px;
+          padding-left: 32px;
+      }
+  
+        .icon{
+            position: absolute;
+            width: 24px;
+            height: 24px;
+        }
+  
+        &:hover {
+          opacity: 1;
+        }
+    }
+  }
+  
+  

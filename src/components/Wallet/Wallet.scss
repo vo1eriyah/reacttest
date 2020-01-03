@@ -1,0 +1,43 @@
+
+@import 'src/components/Main.scss';
+
+.Wallet {
+    padding-top:48px;
+    height: 302px;
+    text-align: center;
+    background: url('./wallet_background.svg') no-repeat;
+    
+  
+    .btc_address {
+      display: block;
+      width: 280px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: $secondary_text_color;
+    }
+      .balance {
+        @extend h1;
+        display: block;
+        width: 100%;
+        margin-top: 12px;
+        width: 280px;
+      }
+    
+      .balance_usd {
+        @extend h4;
+        font-style: italic;
+        display: block;
+        width: 280px;
+      }
+  
+      .topup_block {
+        display: block;
+        width: 248px;
+        margin-top: 32px;
+        margin-right: 24px;
+        padding: 0px 16px;
+      }       
+  }
+  

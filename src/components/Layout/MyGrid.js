@@ -1,4 +1,5 @@
 import React from 'react'
+import style from './Grid.scss'
 
 function MyGrid() {
     return(
