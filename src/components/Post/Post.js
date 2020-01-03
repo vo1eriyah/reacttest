@@ -6,8 +6,26 @@ import ShareBlock from './ShareBlock';
 
 class Post extends React.Component{
     constructor (post){
-        super(post)
+        super(post);
+        this.state = {date: new Date()};
     }
+
+    componentDidMount(){
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000);
+        }
+
+    componentWillMount() {
+        clearInterval(this.timerID);
+    }
+
+    tick (){
+        this.setState({
+            date: new Date()
+          });
+    }
+    
 
     render (props) {
         return (
@@ -19,7 +37,7 @@ class Post extends React.Component{
                             <span className="author-name"><a href={this.props.url}>{this.props.author_name} <i className="author-nickname">{this.props.author_nickname}</i></a></span>
                             <span className="location"><a className="link-xs" href={this.props.location_link}>{this.props.location_name}</a></span> 
                  
-                            <span className="post-date">{this.props.post_date}</span>
+                            <span className="post-date">{this.state.date.toLocaleTimeString()}</span>
                         </div>
                     </div>
 
@@ -31,7 +49,7 @@ class Post extends React.Component{
                             <div className="post_photo_solo"><img src={this.props.photourl}></img></div>
                         </p>
 
-                        <ShareBlock/>
+                        <ShareBlock btcLikeCount={this.props.btcLikeCount} commentCount={this.props.commentCount} repostCount={this.props.repostCount}/>
                     </div>
 
 
