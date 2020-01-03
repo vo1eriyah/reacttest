@@ -3,10 +3,11 @@ $font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Ca
 $text_color: #f2f2f2;
 $secondary_text_color: #878b9e;
 $background_color: #121526;
-$card_background_color: #1B1F36;
+$card_background_color: #23294C; //#1B1F36
 $card_border_color: #272D51;
 $paragraph_text_size: 15px;
 $accent_color: #A18AFF;
+$background_secondary: #1B1F36;
 /////////////////////////////////////
 
 // GRID colors:
@@ -21,6 +22,12 @@ html, body {
     font-family: $font;
     height: 100%;
 }
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 41px;
+}
 
 h4 {
   font-size: 17px;
@@ -29,10 +36,40 @@ h4 {
   line-height: 20px;
 }
 
+p {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+}
+
+caption {
+  color: $secondary_text_color;
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+.link-xs {
+  margin: 0;
+    @extend caption;
+    color: $accent_color;
+
+    &:hover {
+      color: darken($accent_color, 5%);
+      cursor: pointer;
+    }
+}
+
+.link {
+  @extend p;
+  font-weight: 400;
+  color: $accent_color;
+}
+
 .wrapper{
   max-width: 1200px;
   margin: auto;
-  padding: 16px;
+  padding: 16px 16px;
 }
 
 /*Basic Grid Styles*/
@@ -66,7 +103,6 @@ h4 {
 $gutter: 1.5em;
 .Grid--gutters {
   margin-left: -$gutter;
-  //margin-right: $gutter/2;
   .Grid-cell {
     margin-left: $gutter;
   }
@@ -116,61 +152,56 @@ $gutter: 1.5em;
     background: $card_background_color;
     border: 1px solid $card_border_color;
     border-radius: 4px;
-    padding: 16px 8px 8px 8px;
+    padding: 16px 16px 0px 16px;
 }
 
 .post-auth-desc {
   display: block;
   
-  .author_photo {
-    padding-left: 16px;
+  .author-photo {
     position: absolute;
     width: 32px;
   }
   
 }
 
-.author_info {
-    margin-left: 52px;
+.author-info {
+    margin-left: 40px;
     position: relative;
     
 
-    .author_name {
+    .author-name {
+      @extend h4;
         font-weight: 600;
         display: inline-block;
         width: 100%;
     }
 
-    .author_nickname {
+    .author-nickname {
         color: $secondary_text_color;
     }
 
     .location {
         display: inline-block;
         margin-top: 4px;
-        padding-right: 8px;
         font-size: 13px;
+
+        &:after {
+          content: '';
+          background: url('./Post/dot_divider.svg') no-repeat;
+          background-position: center center;
+          width: 16px;
+          height: 16px;
+          padding-left: 24px;
+        }
     }
 
-    .post_date {
-        color: $secondary_text_color;
-        margin-top: 4px;
-        padding-left: 8px;
-        font-size: 13px;
-    }
-
-    .post_divider {
-        clip-path: url('/dot_divider.svg');
+    .post-date {
+      @extend caption; 
     }
 }
 
-.post_content {
-    padding-left: 56px;
-    padding-right: 16px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    line-height: 22px;
-
+.post-content {
     .post_photo_solo {
         max-width: 1200px;
         padding-right: 16px;
@@ -195,6 +226,8 @@ $gutter: 1.5em;
         opacity: 0.5;
       }
     }
+
+
     .ShareBlock {
       width: 100%;
       height: 44px;
@@ -231,16 +264,15 @@ $gutter: 1.5em;
   margin-top: 48px;
 
   .menu-item {
-    margin-top: 12px;
+      margin-top: 12px;
       height: 48px;
       display: -webkit-box;
       -webkit-box-align: center;
+      opacity: 0.7;
 
       .menu-link {
+        @extend h4;
         position: relative;
-        font-weight: bold;
-        font-size: 17px;
-        line-height: 20px;
         letter-spacing: 0.7px;
         padding-left: 32px;
     }
@@ -249,6 +281,10 @@ $gutter: 1.5em;
           position: absolute;
           width: 24px;
           height: 24px;
+      }
+
+      &:hover {
+        opacity: 1;
       }
   }
 }
@@ -293,8 +329,8 @@ $gutter: 1.5em;
 .ava {
     border-radius: 100rem;
     border: 1px solid $text_color ;
-    margin: 0px 4px 4px 4px;
     background-color: $secondary_text_color;
+    background-position:center;
 }
 
 .avatar {
@@ -334,6 +370,7 @@ $gutter: 1.5em;
 
 .Quote {
     @extend .post-container;
+    background-color: $background_secondary;
     border: none;
     padding: 2px 8px 2px 4px;
     margin-top: 16px;
@@ -346,10 +383,7 @@ $gutter: 1.5em;
 }
 
 
-.link {
-    color: $accent_color;
-    line-height: 18px;
-}
+
 
 .Mobile-menu {
     display: none;
@@ -381,13 +415,10 @@ $gutter: 1.5em;
     color: $secondary_text_color;
   }
     .balance {
+      @extend h1;
       display: block;
       width: 100%;
       margin-top: 12px;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 34px;
-      line-height: 41px;
       width: 280px;
     }
   
@@ -414,11 +445,33 @@ $gutter: 1.5em;
   .aside-1 {
     display: none;
   }
+
   .Mobile-menu {
     display: flex;
-    margin-bottom: 32px;
+    background-color: $background_secondary;
+    margin: auto;
+    padding: 4px 16px;
+
+
+    .mobile-profile-ava {
+      display: inline-flex;
+      height: 44px;
+      width: 50%;
+      align-items: center;
+      justify-content: flex-start;
+
+    }
+
+    .mobile-wallet {
+      width: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
   }
 }
+
 @media all and (max-width: 600px) {
     .Wallet {
         display: none;
@@ -426,11 +479,27 @@ $gutter: 1.5em;
 
     .Mobile-menu {
         display: flex;
-        margin-bottom: 32px;
     }
 
     .My-Aside {
         display: none;
+    }
+
+    .ShareBlock {
+      font-size: 12px;
+      
+      .count{
+        padding-left: 8px;
+      }
+
+      .icon img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    h4 {
+      font-size: 13px;
     }
 
 }
