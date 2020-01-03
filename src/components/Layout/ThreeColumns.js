@@ -10,13 +10,13 @@ import Feed from '../Post/Feed';
 function Threecolumns () {
     return(
         <React.Fragment>
-            <div class="Grid Grid--full "><div class="Grid-cell"><MobileMenu/></div></div>
+            <div className="Grid Grid--full "><div className="Grid-cell"><MobileMenu/></div></div>
             <div className="wrapper">
-                <div class="Grid Grid--gutters Grid--twoasides">
-                    <div class="Grid-cell feed">
+                <div className="Grid Grid--gutters Grid--twoasides">
+                    <div className="Grid-cell feed">
                         <Feed/>
                     </div>
-                    <div class="Grid-cell aside aside-1">
+                    <div className="Grid-cell aside aside-1">
                         <div className="My-Aside">
                             <Profile/>
                             <Menu/>
@@ -24,7 +24,7 @@ function Threecolumns () {
                         </div>
                     </div>
 
-                    <div class="Grid-cell aside aside-2">
+                    <div className="Grid-cell aside aside-2">
                         <Wallet/>
                     </div>
                 </div>
