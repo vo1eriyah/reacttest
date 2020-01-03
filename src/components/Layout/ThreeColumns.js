@@ -9,7 +9,7 @@ import Feed from '../Post/Feed';
 
 function Threecolumns () {
     return(
-        <div>
+        <React.Fragment>
             <div class="Grid Grid--full "><div class="Grid-cell"><MobileMenu/></div></div>
             <div className="wrapper">
                 <div class="Grid Grid--gutters Grid--twoasides">
@@ -30,7 +30,7 @@ function Threecolumns () {
                 </div>
             </div>
 
-    </div>
+    </React.Fragment>
 
     );
 }

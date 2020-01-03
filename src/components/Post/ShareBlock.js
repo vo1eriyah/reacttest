@@ -10,7 +10,7 @@ class ShareBlock extends React.Component {
 
     render(props){
         return(
-            <div>
+            <React.Fragment>
             <div className="divider"><hr/></div>
             <div className="ShareBlock">
                 
@@ -18,7 +18,7 @@ class ShareBlock extends React.Component {
                 <div className="CommentsCount like"><span className="icon"><img src={CommentIcn}/></span><span className="count">22</span></div>
                 <div className="RepostCount like"><span className="icon"><img src={RepostCountIcn}/></span><span className="count active">12</span></div>
             </div>
-            </div>
+            </React.Fragment>
         );
     }
 }
