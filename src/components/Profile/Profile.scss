@@ -1,0 +1,52 @@
+@import 'src/components/Main.scss';
+
+.ava {
+    border-radius: 100rem;
+    border: 1px solid $text_color ;
+    background-color: $secondary_text_color;
+    background-position:center;
+}
+
+.avatar {
+    display: inline-block;
+    position: absolute;
+}
+
+.self-info {
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 4px;
+    position: relative;
+    margin-left: 64px;
+}
+
+.bio-name {
+    
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    width: 100%;
+  }
+
+  .bio-nickname {
+    @extend h4;
+    font-style: italic;
+    white-space: nowrap;
+    color: $secondary_text_color;
+    line-height: 20px;
+    width: 100%;
+  }
+
+.Quote {
+    background-color: $background_secondary;
+    border: none;
+    padding: 2px 8px 2px 4px;
+    margin-top: 16px;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: $paragraph_text_size;
+    line-height: 18px;
+}

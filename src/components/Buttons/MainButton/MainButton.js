@@ -1,4 +1,5 @@
 import React from 'react'
+import style from './MainButton.scss'
 
 class MainButton extends React.Component{
     render(props){

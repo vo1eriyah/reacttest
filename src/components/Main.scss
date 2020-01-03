@@ -1,3 +1,5 @@
+@import '../components/Menu/MobileMenu/MobileMenu.scss';
+
 /////////////////////////////////////
 $font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 $text_color: #f2f2f2;
@@ -10,8 +12,6 @@ $accent_color: #A18AFF;
 $background_secondary: #1B1F36;
 $button_background: #8566FF;
 /////////////////////////////////////
-
-@import '../components/Menu/MobileMenu/MobileMenu.scss';
 
 html, body {
     margin: 0 auto;
@@ -94,10 +94,8 @@ caption {
     }
 
     .bio-nickname {
-      font-size: 17px;
-      font-weight: 600;
+      @extend h4;
       font-style: italic;
-      letter-spacing: 0.7px;
       white-space: nowrap;
       color: $secondary_text_color;
       line-height: 20px;
@@ -118,7 +116,6 @@ caption {
     line-height: 18px;
 }
 
-
 .Mobile-menu {
     display: none;
 }
@@ -129,17 +126,10 @@ caption {
 
   .CTA-button {
     margin-top: 32px;
-}
+  }
 }
 
 @media all and (max-width: 800px){
-  .aside-2 {
-    display: none;
-  }
-  .aside-1 {
-    display: none;
-  }
-
   .Mobile-menu {
     display: flex;
     background-color: $background_secondary;
@@ -149,6 +139,9 @@ caption {
 }
 
 @media all and (max-width: 600px) {
+    h4 {
+      font-size: 13px;
+    }
     .Wallet {
         display: none;
     }
@@ -172,10 +165,6 @@ caption {
         width: 20px;
         height: 20px;
       }
-    }
-
-    h4 {
-      font-size: 13px;
     }
 
 }
