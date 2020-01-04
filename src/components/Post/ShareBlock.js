@@ -1,8 +1,8 @@
 import React from 'react'
 import './post.scss';
-import BTClikeIcon from './BTCLikeIcon'
-import CommentIcon from './CommentIcon'
-import RepostIcon from './RepostIcon'
+import BTClikeIcon from './icons/BTCLikeIcon'
+import CommentIcon from './icons/CommentIcon'
+import RepostIcon from './icons/RepostIcon'
 
 class ShareBlock extends React.Component {
     constructor(ShareBlock){
