@@ -12,8 +12,7 @@ class Post extends React.Component{
 
     componentDidMount(){
         this.timerID = setInterval(
-            () => this.tick(),
-            1000);
+            () => this.tick(), 1000);
         }
 
     componentWillMount() {
