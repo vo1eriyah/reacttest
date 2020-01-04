@@ -1,15 +1,17 @@
 @import 'src/components/Main.scss';
 
-.ava {
-    border-radius: 100rem;
-    border: 1px solid $text_color ;
-    background-color: $secondary_text_color;
-    background-position:center;
-}
-
 .avatar {
     display: inline-block;
     position: absolute;
+    overflow: hidden;
+    max-width: 48px;
+    max-height: 48px;
+
+    .ava {
+        border-radius: 100rem;
+        border: 1px solid $text_color ;
+        background-color: $secondary_text_color;
+    }
 }
 
 .self-info {
@@ -21,7 +23,6 @@
 }
 
 .bio-name {
-    
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;

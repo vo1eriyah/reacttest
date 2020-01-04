@@ -9,7 +9,7 @@ class Avatar extends React.Component {
     render(props){
         return(
             <div className="avatar">
-                <img className ="ava" width={this.props.width} height={this.props.height} src={this.props.imgurl}></img>
+                <img className="ava" width={this.props.width} height={this.props.height} src={this.props.imgurl}/>
             </div>
         );
     }
