@@ -19,7 +19,9 @@
     padding: 12px 12px 12px 12px;
 
     &:hover {
+      cursor: pointer;
       background: darken(#8A6FF5, 5%);
-      transition: 0.5ms;
+      transition: cubic-bezier(.17,.67,.83,.67) 0.5ms ease;
+      box-shadow: 0px 0px 17px rgba(138, 111, 245, 0.6);
   }
 }

@@ -25,8 +25,9 @@
         }
   
         &:hover {
+          cursor: pointer;
           opacity: 1;
-          background-color: darken($accent_color, 80%);
+          //background-color: darken($accent_color, 80%);
         }
     }
   }
