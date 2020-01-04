@@ -101,6 +101,18 @@
         height: 24px;
         width: 24px;
         position: absolute;
+
+        svg {
+          fill: $secondary_text_color;
+        }
+
+        .comment-icon {
+          svg{
+            fill: none;
+          }
+
+        }
+
       }
 
       .count {
@@ -111,6 +123,18 @@
 
       .liked{
         color: $accent_color;
+
+        svg {         
+          fill: $accent_color;
+          #comment-icon {
+            fill: none;
+          }
+        }
+
       }
   }
 }
+
+
+
+

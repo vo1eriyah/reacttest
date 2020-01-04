@@ -49,9 +49,8 @@ class Post extends React.Component{
                             <div className="post_photo_solo"><img src={this.props.photourl}></img></div>
                         </p>
 
-                        <ShareBlock btcLikeCount={this.props.btcLikeCount} liked={this.props.liked} commentCount={this.props.commentCount} repostCount={this.props.repostCount}/>
+                        <ShareBlock btcLikeCount={this.props.btcLikeCount} liked={this.props.liked} commented={this.props.commented} reposted={this.props.commented} commentCount={this.props.commentCount} repostCount={this.props.repostCount}/>
                     </div>
-
 
                 </div>
             </div>
