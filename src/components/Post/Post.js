@@ -36,6 +36,11 @@ class Post extends React.Component{
             })
 
         }
+        
+        let photo;
+        if (this.props.photourl){
+            photo = <div className="post_photo_solo"><img src={this.props.photourl}></img></div>
+        }
 
         return (
             <div >
@@ -53,13 +58,10 @@ class Post extends React.Component{
                         <p className="Post_text">
                             {this.props.postcontent}
                             <a className="link">{hashList} </a>
-                            
-                            <div className="post_photo_solo"><img src={this.props.photourl}></img></div>
+                            {photo}
                         </p>
-
                         <ShareBlock btcLikeCount={this.props.btcLikeCount} liked={this.props.liked} commented={this.props.commented} reposted={this.props.reposted} commentCount={this.props.commentCount} repostCount={this.props.repostCount}/>
                     </div>
-
                 </div>
             </div>
         );
