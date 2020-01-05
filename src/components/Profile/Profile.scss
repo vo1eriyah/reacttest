@@ -12,6 +12,13 @@
         border: 1px solid $text_color ;
         background-color: $secondary_text_color;
     }
+
+    &:hover {
+        .ava {
+            border: 1px solid $accent_color ;
+        }
+
+    }
 }
 
 .self-info {
