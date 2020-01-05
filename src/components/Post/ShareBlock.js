@@ -17,18 +17,24 @@ class ShareBlock extends React.Component {
 
         //this.btcLikeClick = this.btcLikeClick.bind(this);
         this.btcLikeClick = () => {
-            if (this.state.liked == 1)
+            if (this.state.liked == 0)
             {
                 this.setState(state => ({
-                btcLikeCount: parseFloat(state.btcLikeCount)+ 0.01,
-                //commentCount: ++state.commentCount
+                    btcLikeCount: ++state.btcLikeCount,
+                    liked: state.liked = 1
             }));
 
-            console.log('Like ACCEPTED;)' + this.state.commentCount + ' '+ this.state.btcLikeCount);
+            console.log('LIKED ;)' + this.state.btcLikeCount);
         }
-        else
-            console.log('You have already liked ;)');
+        else {
+            this.setState(state => ({
+                btcLikeCount: --state.btcLikeCount,
+                liked: state.liked = 0
+            }));
+            console.log('You have already DISLIKED ;)');
+            }
         }
+
     }
 
     /*btcLikeClick() {
@@ -47,12 +53,12 @@ class ShareBlock extends React.Component {
 
     render(props){
 
-        const {btcLikeCount, commentCount, repostCount} = this.props;
+        const {btcLikeCount, commentCount, repostCount} = this.state;
 
         let listitem =[];
 
         (this.state.liked == 1) ? listitem.push(<div className="like" onClick={() => this.btcLikeClick()}><span className="icon liked" ><BTClikeIcon /></span><span className="count liked">{btcLikeCount}</span></div>) 
-        : listitem.push(<div className="like"><span className="icon"><BTClikeIcon/></span><span className="count">{btcLikeCount}</span></div>);
+        : listitem.push(<div className="like" onClick={() => this.btcLikeClick()}><span className="icon"><BTClikeIcon/></span><span className="count">{btcLikeCount}</span></div>);
         
         (this.state.commented == 1) ? listitem.push(<div className="like" onClick={this.handleClick}><span className="icon liked"><CommentIcon/></span><span className="count liked">{this.props.commentCount}</span></div>)
         : listitem.push(<div className="like"><span id="comment-icon" className="icon"><CommentIcon/></span><span className="count">{this.props.commentCount}</span></div>);

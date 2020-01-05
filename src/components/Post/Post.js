@@ -35,7 +35,6 @@ class Post extends React.Component{
                         <div className="author-info">
                             <span className="author-name"><a href={this.props.url}>{this.props.author_name} <i className="author-nickname">{this.props.author_nickname}</i></a></span>
                             <span className="location"><a className="link-xs" href={this.props.location_link}>{this.props.location_name}</a></span> 
-                 
                             <span className="post-date">{this.state.date.toLocaleTimeString()}</span>
                         </div>
                     </div>
