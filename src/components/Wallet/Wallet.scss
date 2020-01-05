@@ -10,7 +10,7 @@
   
     .btc_address {
       display: block;
-      width: 280px;
+      //min-width: 280px;
       font-style: normal;
       font-weight: bold;
       font-size: 14px;
@@ -22,22 +22,25 @@
         display: block;
         width: 100%;
         margin-top: 12px;
-        width: 280px;
+        //width: 280px;
       }
     
       .balance_usd {
         @extend h4;
         font-style: italic;
         display: block;
-        width: 280px;
+        //min-width: 280px;
       }
   
       .topup_block {
         display: block;
-        width: 248px;
         margin-top: 32px;
-        margin-right: 24px;
         padding: 0px 16px;
       }       
   }
   
+  @media all and (max-width: 1024px){
+    .balance {
+      font-size: 28px;
+    }
+  }

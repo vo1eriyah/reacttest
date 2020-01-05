@@ -130,6 +130,9 @@ caption {
 }
 
 @media all and (max-width: 800px){
+  h1 {
+      font-size: 28px;
+  }
   .Mobile-menu {
     display: flex;
     background-color: $background_secondary;
@@ -139,6 +142,9 @@ caption {
 }
 
 @media all and (max-width: 600px) {
+    h1 {
+      font-size: 28px;
+    }
     h4 {
       font-size: 13px;
     }
