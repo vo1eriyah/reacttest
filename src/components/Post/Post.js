@@ -27,6 +27,16 @@ class Post extends React.Component{
     
 
     render (props) {
+        let hashes = String(this.props.hashtags).split(' ');
+        let hashList=[];
+        
+        if (hashes != null) {
+            hashes.forEach((hash) => {
+                hashList.push(<a className="link">#{hash} </a>) 
+            })
+
+        }
+
         return (
             <div >
                 <div className="post-container">
@@ -42,7 +52,7 @@ class Post extends React.Component{
                     <div className="post-content" >
                         <p className="Post_text">
                             {this.props.postcontent}
-                            <a className="link">#{this.props.hashtags}</a>
+                            <a className="link">{hashList} </a>
                             
                             <div className="post_photo_solo"><img src={this.props.photourl}></img></div>
                         </p>

@@ -10,7 +10,7 @@ class Feed extends React.Component {
         const POSTS =[
             {post_ID:"1", author_photo_url:'https://st.kp.yandex.net/im/kadr/8/0/8/kinopoisk.ru-Matthew-McConaughey-808168.jpg', author_name:'Mathew',
             author_nickname:'@maccounaughey', postcontent:"The Venom symbiote requires a perfect match to bond with its host; otherwise, the host is doomed. The Venom movie plays like a midnight horror that has invaded a superhero movie, and while there are some laffs to be had, it's far from a perfect match.",
-            hashtags: '123', location_name: 'Batu bolong, Bali, Indonesia', photourl: 'https://i.pinimg.com/originals/34/f0/38/34f038ddfbf1ebc166fc0182c4fdf667.jpg',
+            hashtags: '123', location_name: 'Batu bolong, Bali, Indonesia', photourl: 'https://i.pinimg.com/originals/34/f0/38/34f038ddfbf1ebc166fc0182c4fdf667.jpg', hashtags: 'bymathew bitches',
             btcLikeCount: '132', commentCount: '1', repostCount: '1', commented:'1', liked:'1', reposted:'1'},
         
             {post_ID:"2", author_photo_url:'https://i.ytimg.com/vi/Gg-Ps4flCxE/maxresdefault.jpg', author_name:'Hulk',
@@ -22,6 +22,7 @@ class Feed extends React.Component {
             hashtags: "about", location_name: "GUANTANAMO, USA", photourl: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/thor-ragnarok-hulk-scar-1572267017.jpg",
             btcLikeCount: '2', commentCount: '0', repostCount: '22', commented:'1', liked:'1', reposted:'0'}   
         ]
+
 
         const listItems = POSTS.map((post) =>
             <Post
