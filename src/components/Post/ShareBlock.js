@@ -34,6 +34,13 @@ class ShareBlock extends React.Component {
             }
         }
 
+        this.commentClick = () => {
+            console.log('You pressed to COMMENT ;)');
+        }
+
+        this.repostClick = () => {
+            console.log('You pressed to REPOST ;)');
+        }
     }
 
     /*btcLikeClick() {
@@ -59,11 +66,11 @@ class ShareBlock extends React.Component {
         (this.state.liked == 1) ? listitem.push(<div className="like" onClick={() => this.btcLikeClick()}><span className="icon liked" ><BTClikeIcon /></span><span className="count liked">{btcLikeCount}</span></div>) 
         : listitem.push(<div className="like" onClick={() => this.btcLikeClick()}><span className="icon"><BTClikeIcon/></span><span className="count">{btcLikeCount}</span></div>);
         
-        (this.state.commented == 1) ? listitem.push(<div className="like" ><span className="icon liked"><CommentIcon/></span><span className="count liked">{this.props.commentCount}</span></div>)
-        : listitem.push(<div className="like"><span id="comment-icon" className="icon"><CommentIcon/></span><span className="count">{this.props.commentCount}</span></div>);
+        (this.state.commented == 1) ? listitem.push(<div className="like" onClick={() => this.commentClick()}><span className="icon liked"><CommentIcon/></span><span className="count liked">{this.props.commentCount}</span></div>)
+        : listitem.push(<div className="like" onClick={() => this.commentClick()}><span id="comment-icon" className="icon"><CommentIcon/></span><span className="count">{this.props.commentCount}</span></div>);
 
-        (this.state.reposted == 1) ? listitem.push(<div className="like" ><span className="icon liked"><RepostIcon/></span><span className="count liked">{this.props.repostCount}</span></div>)
-        : listitem.push(<div className="like"><span className="icon"><RepostIcon/></span><span className="count">{this.props.repostCount}</span></div>)
+        (this.state.reposted == 1) ? listitem.push(<div className="like" onClick={() => this.repostClick()}><span className="icon liked"><RepostIcon/></span><span className="count liked">{this.props.repostCount}</span></div>)
+        : listitem.push(<div className="like" onClick={() => this.repostClick()}><span className="icon"><RepostIcon/></span><span className="count">{this.props.repostCount}</span></div>)
         
         
 
