@@ -39,7 +39,10 @@ class ShareBlock extends React.Component {
         }
 
         this.repostClick = () => {
-            console.log('You pressed to REPOST ;)');
+            if (this.state.reposted == 0)
+                console.log('You pressed to REPOST ;)');
+            else 
+                console.log('You have it already reposted')
         }
     }
 
