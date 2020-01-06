@@ -2,8 +2,9 @@
   "posts": [
     { "id": 1, 
       "authorName": "Mathew", 
-      "authoPhotoUrl": "https://st.kp.yandex.net/im/kadr/8/0/8/kinopoisk.ru-Matthew-McConaughey-808168.jpg" 
+      "authoPhotoUrl": "https://st.kp.yandex.net/im/kadr/8/0/8/kinopoisk.ru-Matthew-McConaughey-808168.jpg",
+      "time": "2019-01-01T23:28:56.782Z"
     }
   ],
-  "hashes": {"id": 1, "body": ""}
+  "hashes": {"id": 1, "item": ""}
 }
