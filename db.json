@@ -2,7 +2,9 @@
   "posts": [
     {
       "id": 1,
-       "time": 2019-01-01T23:28:56.782Z
+      "time": "2019-01-01T23:28:56.782Z",
+      "author_photo_url":"ttps://st.kp.yandex.net/im/kadr/8/0/8/kinopoisk.ru-Matthew-McConaughey-808168.jpg",
+      "author_name": "Mathew"
     }
   ],
   "profile": {
