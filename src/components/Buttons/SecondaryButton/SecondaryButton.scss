@@ -10,6 +10,6 @@
     &:hover {
       background: darken(rgba(161, 138, 255, 0.4), 10%);
       color: lighten($accent_color, 10%);
-      transition: 0.9ms;
+      transition: cubic-bezier(.17,.67,.83,.67) 0.1s;
     }
   }
