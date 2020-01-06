@@ -1,6 +1,6 @@
 {
   "posts": [
-    { "id": 1, "author_name": "Mathew" },
+    { "id": 1, "authorName": "Mathew" },
     { "id": 2, "title": "Post 2" },
     { "id": 3, "title": "Post 3" }
   ],
