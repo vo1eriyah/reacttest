@@ -7,9 +7,13 @@ import ShareBlock from './ShareBlock';
 class Post extends React.Component{
     constructor (post){
         super(post);
-        this.state = {date: new Date()};
+        //this.state = {date: new Date()};
+        this.state = {
+            date: this.props.time
+        }
     }
 
+    /*
     componentDidMount(){
         this.timerID = setInterval(
             () => this.tick(), 1000);
@@ -24,7 +28,7 @@ class Post extends React.Component{
             date: new Date()
           });
     }
-    
+    */
 
     render (props) {
         let hashes = String(this.props.hashtags).split(' ');
@@ -50,7 +54,7 @@ class Post extends React.Component{
                         <div className="author-info">
                             <span className="author-name"><a href={this.props.url}>{this.props.author_name} <i className="author-nickname">{this.props.author_nickname}</i></a></span>
                             <span className="location"><a className="link-xs" href={this.props.location_link}>{this.props.location_name}</a></span> 
-                            <span className="post-date">{this.state.date.toLocaleTimeString()}</span>
+                            <span className="post-date">{this.state.date}</span>
                         </div>
                     </div>
 

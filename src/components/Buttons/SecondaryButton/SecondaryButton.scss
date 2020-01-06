@@ -8,7 +8,7 @@
     border: 2px solid $accent_color;
   
     &:hover {
-      background: darken(rgba(161, 138, 255, 0.4), 10%);
+      background: darken(rgba(161, 138, 255, 0.2), 10%);
       color: lighten($accent_color, 10%);
       transition: cubic-bezier(.17,.67,.83,.67) 0.1s;
     }
