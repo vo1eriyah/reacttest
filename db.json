@@ -1,6 +1,9 @@
 {
   "posts": [
-    { "id": 1, "authorName": "Mathew" },
+    { "id": 1, 
+       "authorName": "Mathew", 
+      "authoPhotoUrl": "https://st.kp.yandex.net/im/kadr/8/0/8/kinopoisk.ru-Matthew-McConaughey-808168.jpg" 
+    },
     { "id": 2, "title": "Post 2" },
     { "id": 3, "title": "Post 3" }
   ],
