@@ -2,12 +2,15 @@ import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Avatar from '../Profile/Avatar';
 import ShareBlock from './ShareBlock';
-import connectDB from '../../services/connectDB'
+import connectDB from '../../services/connectDB';
 
-class Postcopy extends React.Component{
+
+const connection = new connectDB();
+
+export default class Postcopy extends React.Component{
     constructor (post){
+        
         super(post);
-        //connectDB = new connectDB();
         //this.state = {date: new Date()};
         this.state = {
             authorName: null,
@@ -31,9 +34,8 @@ class Postcopy extends React.Component{
     }
 
     componentDidMount(){
-        fetch('https://my-json-server.typicode.com/vo1eriyah/reacttest/posts')
-            .then(results => results.json())
-            .then(async json => {
+        connection.getAllPosts()
+            .then(json => {
                 this.setState({
                     posts: json,
                     isLoaded: true
@@ -52,7 +54,7 @@ class Postcopy extends React.Component{
                     //return <a className="link">#{hash} </a>
                     return hashes.push(<a className="link">#{hash} </a>)
                 })}
-                { console.log(hashes)}
+                { /*console.log(hashes)*/}
             </div>
         ))
 
@@ -60,7 +62,7 @@ class Postcopy extends React.Component{
     getPhoto(id){
         let {isLoaded, posts} = this.state;
         let photo;
-        id = posts.map(item => item.id)
+        //id = posts.map(item => item.id)
 
         /*posts.forEach((item, id) => {
             return <div className="post_photo_solo"><img src={item.photoURL}/></div>
@@ -143,5 +145,3 @@ class Postcopy extends React.Component{
 }
 
 }
-
-export default Postcopy

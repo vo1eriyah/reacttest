@@ -1,10 +1,10 @@
-export default class GetPosts  {
+export default class ConnectDB {
     constructor(){
-        this._urlBase ="https://my-json-server.typicode.com/vo1eriyah/reacttest";
+        this._urlBase ="https://my-json-server.typicode.com/vo1eriyah/reacttest/posts";
     }
 
     async getResource(url){
-        const resource= fetch('${this._urlBase}${url}');
+        const resource= fetch(this._urlBase);
 
         if (!(await resource).ok){
             throw new Error('Couldn\'t fetch ${url}, status: ${resource.status}');
@@ -18,11 +18,14 @@ export default class GetPosts  {
     }
 
     getPost(id){
-        return this.getResource('/posts/${id}')
+        return this.getResource('/${id}')
     }
+    
 }
 
-const posts = new GetPosts();
+
+
+//const posts = new GetPosts();
 
 /*posts.getAllPosts()
     .then(resource => {
