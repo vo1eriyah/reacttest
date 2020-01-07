@@ -1,13 +1,35 @@
 import React from 'react'
 import Post from './Post'
+import Postcopy from './Post copy'
 
 class Feed extends React.Component {
     constructor (Feed){
-        super(Feed)
+        super(Feed);
+
+        this.state = {
+            id: null,
+            authorName: null,
+            authoPhotoUrl: null,
+            time: null,
+            authorNickname: null,
+            postContent: null,
+            hashtags: null,
+            locationName: null,
+            photoURL: null,
+            hashtags: null,
+            btcLikeCount: null,
+            commentCount: null,
+            repostCount: null,
+            liked: null,
+            commented: null,
+            reposted: null,
+            posts: [],
+        }
     }
     
     render (props){
-        const POSTS =[
+        
+        {/*const POSTS =[
             {post_ID:"1", time: "2019-01-01T23:28:56.782Z", author_photo_url:'https://st.kp.yandex.net/im/kadr/8/0/8/kinopoisk.ru-Matthew-McConaughey-808168.jpg', author_name:'Mathew',
             author_nickname:'@maccounaughey', postcontent:"The Venom symbiote requires a perfect match to bond with its host; otherwise, the host is doomed. The Venom movie plays like a midnight horror that has invaded a superhero movie, and while there are some laffs to be had, it's far from a perfect match.",
             hashtags: '123', location_name: 'Batu bolong, Bali, Indonesia', photourl: 'https://i.pinimg.com/originals/34/f0/38/34f038ddfbf1ebc166fc0182c4fdf667.jpg', hashtags: 'bymathew bitches',
@@ -21,32 +43,32 @@ class Feed extends React.Component {
             author_nickname: "@HULK", postcontent: "The Incredible Hulk is an ongoing comic book series featuring the Marvel Comics superhero the Hulk and his alter ego Dr. Bruce Banner. First published in May 1962, the series ran for six issues before it was cancelled in March 1963, and the Hulk character began appearing in Tales to Astonish. With issue #102, Tales to Astonish was renamed to The Incredible Hulk in April 1968, becoming its second volume. The series continued to run until issue #474 in March 1999 when it was replaced with the series Hulk which ran until February 2000 and was retitled to The Incredible Hulk's third volume, running until March 2007 when it became The Incredible Hercules with a new title character. The Incredible Hulk returned in September 2009 beginning at issue #600, which became The Incredible Hulks in November 2010 and focused on the Hulk and the modern incarnation of his expanded family. The series returned to The Incredible Hulk in December 2011 and ran until January 2013, when it was replaced with The Indestructible Hulk as part of Marvel's Marvel NOW! relaunch.",
             hashtags: "about", location_name: "GUANTANAMO, USA", photourl: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/thor-ragnarok-hulk-scar-1572267017.jpg",
             btcLikeCount: '2', commentCount: '0', repostCount: '22', commented:'1', liked:'1', reposted:'0'}   
-        ]
+        ]*/}
 
-
-        const listItems = POSTS.map((post) =>
+        let {posts} = this.state;
+        const listItems = posts.map((post) =>
             <Post
-                key={post.post_ID}
-                author_photo_url={post.author_photo_url}
-                author_name={post.author_name}
-                author_nickname={post.author_nickname}
-                postcontent={post.postcontent}
-                photourl={post.photourl}
-                hashtags={post.hashtags}
-                location_name={post.location_name}
-                btcLikeCount={post.btcLikeCount}
-                commentCount={post.commentCount}
-                repostCount={post.repostCount}
-                liked={post.liked}
-                commented={post.commented}
-                reposted={post.reposted}
-                time={post.time}
+                key={this.state.id}
+                author_photo_url={this.state.authoPhotoUrl}
+                author_name={this.state.authorName}
+                author_nickname={this.state.authorNickname}
+                postcontent={this.state.postContent}
+                photourl={this.state.photoURL}
+                hashtags={this.state.hashtags}
+                location_name={this.state.locationName}
+                btcLikeCount={this.state.btcLikeCount}
+                commentCount={this.state.commentCount}
+                repostCount={this.state.repostCount}
+                liked={this.state.liked}
+                commented={this.state.commented}
+                reposted={this.state.reposted}
+                time={this.state.time}
             />
         )
 
         return (
             <React.Fragment>
-                {listItems}
+                <Postcopy/>
             </React.Fragment>
         )
     }
