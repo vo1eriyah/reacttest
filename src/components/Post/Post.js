@@ -37,7 +37,7 @@ export default class Post extends React.Component{
         let formatter = new Intl.DateTimeFormat("en-GB", {
             weekday: "short",
             month: "short",
-            year: "numeric",
+            year: "numeric", 
             day: "numeric",
             hour: "numeric",
             minute: "numeric"
