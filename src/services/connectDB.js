@@ -22,16 +22,3 @@ export default class ConnectDB {
     }
     
 }
-
-
-
-//const posts = new GetPosts();
-
-/*posts.getAllPosts()
-    .then(resource => {
-        resource.array.forEach(element => {
-            console.log(element);
-        });
-    })*/
-
-
