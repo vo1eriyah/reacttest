@@ -4,12 +4,12 @@ import Avatar from '../Profile/Avatar';
 import ShareBlock from './ShareBlock';
 
 
-class Post extends React.Component{
+export default class Post extends React.Component{
     constructor (post){
         super(post);
         //this.state = {date: new Date()};
         this.state = {
-            date: this.props.time
+            //date: JSON.parse(this.props.time)
         }
     }
 
@@ -33,6 +33,17 @@ class Post extends React.Component{
     render (props) {
         let hashes = String(this.props.hashtags).split(' ');
         let hashList=[];
+
+        let formatter = new Intl.DateTimeFormat("en-GB", {
+            weekday: "short",
+            month: "short",
+            year: "numeric",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric"
+          });
+        let date = new Date('2018-12-12T23:28:56.000Z');
+        console.log(formatter.format(date));
         
         if (hashes != null) {
             hashes.forEach((hash) => {
@@ -54,7 +65,7 @@ class Post extends React.Component{
                         <div className="author-info">
                             <span className="author-name"><a href={this.props.url}>{this.props.author_name} <i className="author-nickname">{this.props.author_nickname}</i></a></span>
                             <span className="location"><a className="link-xs" href={this.props.location_link}>{this.props.location_name}</a></span> 
-                            <span className="post-date">{this.state.date}</span>
+                            <span className="post-date">{this.props.time}</span>
                         </div>
                     </div>
 
@@ -72,5 +83,3 @@ class Post extends React.Component{
     }
 
 }
-
-export default Post

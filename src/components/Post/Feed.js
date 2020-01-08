@@ -37,12 +37,14 @@ class Feed extends React.Component {
                     isLoaded: true
                 })
             })
+            
     }
     
     render (props){
         let {posts, isLoaded} = this.state;
         let listItems = posts.map((post, key) =>
-            <div key="{key}">
+            <div key={post.id}>
+                
                 <Post
                     key={post.id}
                     author_photo_url={post.authoPhotoUrl}
