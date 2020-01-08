@@ -8,7 +8,6 @@ class Feed extends React.Component {
     constructor (Feed){
         super(Feed)
         this.state = {
-            isLoaded: false,
             id: null,
             authorName: null,
             authoPhotoUrl: null,
@@ -26,6 +25,7 @@ class Feed extends React.Component {
             commented: null,
             reposted: null,
             posts: [],
+            isLoaded: false,
         }
     }
 
