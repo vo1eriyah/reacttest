@@ -62,8 +62,8 @@
       "commentText": "I dont care. I don't like Venom Movie. Tom Hardy sucks"
     },
     
-    { "PostID": "1",
-      "commentID": "1"
+    { "postID": "1",
+      "commentID": "2"
       "commentAuthor": "Mathew",
       "commentNickname": "@maccounaughey",
       "commentText": "@HULK You sucks"
