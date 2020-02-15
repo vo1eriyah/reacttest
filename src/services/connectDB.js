@@ -20,5 +20,13 @@ export default class ConnectDB {
     getPost(id){
         return this.getResource('/${id}')
     }
+
+    getAllComments(){
+        return this.getResource('/comments')
+    }
+
+    getPostComment(postID){
+        return this.getResource('/comments/${postID}');
+    }
     
 }

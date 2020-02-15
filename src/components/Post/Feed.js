@@ -46,7 +46,7 @@ class Feed extends React.Component {
             <div key={post.id}>
                 
                 <Post
-                    key={post.id}
+                    id={post.id}
                     author_photo_url={post.authoPhotoUrl}
                     author_name={post.authorName}
                     author_nickname={post.authorNickname}

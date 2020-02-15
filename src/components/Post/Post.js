@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Avatar from '../Profile/Avatar';
 import ShareBlock from './ShareBlock';
+import PostSingle from './PostSingle';
 
 
 export default class Post extends React.Component{
@@ -9,6 +10,8 @@ export default class Post extends React.Component{
         super(post);
         //this.state = {date: new Date()};
         this.state = {
+            postID: this.props.id,
+            isPostClicked: false
             //date: JSON.parse(this.props.time)
         }
     }
@@ -59,7 +62,9 @@ export default class Post extends React.Component{
         }
 
         return (
-            <div >
+            <div onClick={() => this.setState ({isPostClicked: true})}>
+                <div>{this.state.isPostClicked ? <PostSingle postID={this.props.postID}/> : null }</div>
+
                 <div className="post-container">
                     <div className="post-auth-desc">
                         <div className="author-photo"><Avatar width="32" height="32" imgurl={this.props.author_photo_url}/></div>
