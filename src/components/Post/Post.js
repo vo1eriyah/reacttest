@@ -62,11 +62,11 @@ export default class Post extends React.Component{
         }
 
         return (
-            <div onClick={() => this.setState ({isPostClicked: true})}>
+            <div >
                 <div>{this.state.isPostClicked ? <PostSingle postID={this.props.postID}/> : null }</div>
 
                 <div className="post-container">
-                    <div className="post-auth-desc">
+                    <div className="post-auth-desc" onClick={() => this.setState ({isPostClicked: true})}>
                         <div className="author-photo"><Avatar width="32" height="32" imgurl={this.props.author_photo_url}/></div>
                         <div className="author-info">
                             <span className="author-name"><a href={this.props.url}>{this.props.author_name} <i className="author-nickname">{this.props.author_nickname}</i></a></span>
