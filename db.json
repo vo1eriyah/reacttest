@@ -52,5 +52,12 @@
       "reposted": 0
     }
   ],
-  "hashes": {"id": 1, "item": " "}
+  "hashes": {"id": 1, "item": " "},
+  
+  "comments":
+  {
+    "postID": "1",
+    "commentCount": 1,
+    "comment1": "I dont care. I don't like Venom Movie. Tom Hardy sucks"
+  }
 }
