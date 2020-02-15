@@ -43,7 +43,8 @@ export default class Post extends React.Component{
             minute: "numeric"
           });
         let date = new Date('2018-12-12T23:28:56.000Z');
-        console.log(formatter.format(date));
+        console.log(date);
+
         
         if (hashes != null) {
             hashes.forEach((hash) => {
