@@ -11,7 +11,8 @@ export default class Post extends React.Component{
         //this.state = {date: new Date()};
         this.state = {
             postID: this.props.id,
-            isPostClicked: false
+            isPostClicked: false,
+            isFeedActive: true
             //date: JSON.parse(this.props.time)
         }
     }
@@ -36,6 +37,7 @@ export default class Post extends React.Component{
     render (props) {
         let hashes = String(this.props.hashtags).split(' ');
         let hashList=[];
+        let {isPostClicked, isFeedActive} = this.state;
 
         let formatter = new Intl.DateTimeFormat("en-GB", {
             weekday: "short",
@@ -61,31 +63,36 @@ export default class Post extends React.Component{
             photo = <div className="post_photo_solo"><img src={this.props.photourl}></img></div>
         }
 
-        return (
-            <div >
-                <div>{this.state.isPostClicked ? <PostSingle postID={this.props.postID}/> : null }</div>
+        if (isPostClicked && !isFeedActive) {
+            return (
+            <div><PostSingle postID={this.props.postID} /></div>
+            )
+        }
+        else {
+            return (
+                <div>
+                    <div className="post-container" onClick={() => this.setState({ isPostClicked: true, isFeedActive: false})}>
+                        <div className="post-auth-desc">
+                            <div className="author-photo"><Avatar width="32" height="32" imgurl={this.props.author_photo_url} /></div>
+                            <div className="author-info">
+                                <span className="author-name"><a href={this.props.url}>{this.props.author_name} <i className="author-nickname">{this.props.author_nickname}</i></a></span>
+                                <span className="location"><a className="link-xs" href={this.props.location_link}>{this.props.location_name}</a></span>
+                                <span className="post-date">{this.props.time}</span>
+                            </div>
+                        </div>
 
-                <div className="post-container">
-                    <div className="post-auth-desc" onClick={() => this.setState ({isPostClicked: true})}>
-                        <div className="author-photo"><Avatar width="32" height="32" imgurl={this.props.author_photo_url}/></div>
-                        <div className="author-info">
-                            <span className="author-name"><a href={this.props.url}>{this.props.author_name} <i className="author-nickname">{this.props.author_nickname}</i></a></span>
-                            <span className="location"><a className="link-xs" href={this.props.location_link}>{this.props.location_name}</a></span> 
-                            <span className="post-date">{this.props.time}</span>
+                        <div className="post-content" >
+                            <p className="Post_text">
+                                {this.props.postcontent}
+                                <a className="link">{hashList} </a>
+                                {photo}
+                            </p>
+                            <ShareBlock btcLikeCount={this.props.btcLikeCount} liked={this.props.liked} commented={this.props.commented} reposted={this.props.reposted} commentCount={this.props.commentCount} repostCount={this.props.repostCount} />
                         </div>
                     </div>
-
-                    <div className="post-content" >
-                        <p className="Post_text">
-                            {this.props.postcontent}
-                            <a className="link">{hashList} </a>
-                            {photo}
-                        </p>
-                        <ShareBlock btcLikeCount={this.props.btcLikeCount} liked={this.props.liked} commented={this.props.commented} reposted={this.props.reposted} commentCount={this.props.commentCount} repostCount={this.props.repostCount}/>
-                    </div>
                 </div>
-            </div>
-        );
+            );
+        }
     }
 
 }
