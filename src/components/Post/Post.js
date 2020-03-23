@@ -3,6 +3,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Avatar from '../Profile/Avatar';
 import ShareBlock from './ShareBlock';
 import PostSingle from './PostSingle';
+import { Router } from 'react-router-dom';
 
 
 export default class Post extends React.Component{
@@ -70,8 +71,10 @@ export default class Post extends React.Component{
         }
         else {
             return (
+
+                
                 <div>
-                    <div className="post-container" onClick={() => this.setState({ isPostClicked: true, isFeedActive: false})}>
+                    <div className="post-container" >
                         <div className="post-auth-desc">
                             <div className="author-photo"><Avatar width="32" height="32" imgurl={this.props.author_photo_url} /></div>
                             <div className="author-info">
@@ -82,7 +85,7 @@ export default class Post extends React.Component{
                         </div>
 
                         <div className="post-content" >
-                            <p className="Post_text">
+                            <p className="Post_text" onClick={() => this.setState({ isPostClicked: true, isFeedActive: false})}>
                                 {this.props.postcontent}
                                 <a className="link">{hashList} </a>
                                 {photo}
@@ -91,6 +94,7 @@ export default class Post extends React.Component{
                         </div>
                     </div>
                 </div>
+
             );
         }
     }
