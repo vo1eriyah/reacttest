@@ -5,6 +5,7 @@ import SettingsIcn from './settings.svg'
 import DialogsIcn from './dialogs.svg'
 import NotificationsIcn from './notifications.svg'
 import DealsIcn from './deals.svg'
+import HomeIcn from './home.svg'
 import style from './MainMenu.scss'
 import Settings_list from '../../Settings/Settings_list.js'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
@@ -31,7 +32,7 @@ class Menu extends React.Component{
             return (
                 <Router>
                 <div className="main-menu">
-                    <MenuItem title="Home" url="/home"/>
+                    <MenuItem icon={HomeIcn} title="Home" url="/home"/>
                     <MenuItem icon={SettingsIcn} title="Settings" url="/settings"/>
                     <MenuItem icon={DialogsIcn} title="Dialogs" url="/dialogs"/>
                     <MenuItem icon={DealsIcn} title="My Deals" url="/deals"/>

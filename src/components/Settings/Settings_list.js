@@ -15,8 +15,7 @@ class Settings_list extends React.Component {
     render (props){
         return(
             <div className="wrapper">
-
-            <div className="Grid-cell"><div className="">...</div></div>
+            <div className="Grid-cell"><h1>Settings</h1><div className="">...</div></div>
             </div>
     );
         
